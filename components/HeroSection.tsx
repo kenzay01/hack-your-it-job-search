@@ -9,10 +9,10 @@ const HeroSection = () => {
       <Image
         src={heroImage}
         alt="Hero Image"
-        className="absolute top-52 right-20 object-cover w-102 h-auto opacity-95 rounded-3xl border-3 border-white/20 hover:scale-101 transition-transform duration-300"
+        className="absolute top-52 right-38 object-cover w-102 h-auto opacity-95 rounded-3xl border-3 border-white/20 hover:scale-101 transition-transform duration-300"
       />
       <div className="pt-22 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden  ">
-        <div className="px-4 mr-46">
+        <div className="px-4 mr-64">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 hover:scale-103 transition-transform duration-300">
               <Star className="w-4 h-4 text-yellow-400 fill-current" />
