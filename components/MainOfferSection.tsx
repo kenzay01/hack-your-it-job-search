@@ -130,7 +130,7 @@ const MainOfferSection = () => {
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900">
-                    Для побудови кар'єри
+                    Для побудови кар`єри
                   </h4>
                   <p className="text-gray-600">
                     Довгострокова стратегія професійного розвитку
