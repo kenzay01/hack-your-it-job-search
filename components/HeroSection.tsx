@@ -10,6 +10,11 @@ const HeroSection = () => {
         src={heroImage}
         alt="Hero Image"
         className="absolute top-52 right-38 object-cover w-102 h-auto opacity-95 rounded-3xl border-3 border-white/20 hover:scale-101 transition-transform duration-300"
+        quality={85}
+        // placeholder="blur"
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        loading="lazy"
       />
       <div className="pt-22 pb-12 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden  ">
         <div className="px-4 mr-64">
