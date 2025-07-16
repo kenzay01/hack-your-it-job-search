@@ -25,7 +25,10 @@ const AuthorSection = () => {
                   src={authorImg}
                   alt="Фото Дмитра Пучкова"
                   layout="fill"
-                  className="rounded-2xl object-cover w-full h-full "
+                  className="rounded-2xl object-cover w-full h-full"
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
                 />
               </div>
               {/* Декоративні елементи */}
