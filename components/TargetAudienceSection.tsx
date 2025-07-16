@@ -69,7 +69,7 @@ const TargetAudienceSection = () => {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-blue-600 to-blue-800">
+    <section className="relative pt-16 bg-gradient-to-br from-blue-600 to-blue-800">
       <div className="absolute top-0 left-0 w-full">
         <svg
           viewBox="0 0 1200 120"
@@ -113,13 +113,13 @@ const TargetAudienceSection = () => {
                       <h3 className="text-2xl font-bold text-gray-900">
                         {index + 1}. {category.title}
                       </h3>
-                      <ul className="space-y-2">
+                      <ul className="">
                         {category.problems.map((problem, problemIndex) => (
                           <li
                             key={problemIndex}
                             className="flex items-center justify-start space-x-2"
                           >
-                            <div className="w-2 h-2 bg-gray-400 rounded-full mt-3 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
                             <p className="text-gray-600 pt-3">{problem}</p>
                           </li>
                         ))}
@@ -132,7 +132,7 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-white text-center border-4 border-blue-700 hover:border-white/25 transition-all duration-300 hover:scale-102">
+          <div className="bg-white/10 rounded-3xl p-8 md:p-12 text-white text-center border-4 border-blue-500 hover:border-white/25 transition-all duration-300 hover:scale-102">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Якщо хоч 2 пункти про вас
