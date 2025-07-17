@@ -4,10 +4,14 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "Courier New", monospace;
   --font-geist-sans: "Geist Sans", sans-serif;
+  --main-color: #b87ae6;
+  --main-two-color: #6b0ee8;
+  --secondary-color: #050505;
 }
 
 body {
   font-family: var(--font-geist-sans);
+  background-color: var(--secondary-color);
 }
 
 @layer base {

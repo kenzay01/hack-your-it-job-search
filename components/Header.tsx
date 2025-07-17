@@ -16,42 +16,42 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-md border-b border-slate-200 rounded-b-4xl shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--secondary-color)] rounded-b-4xl drop-shadow-[0px_-10px_50px_rgb(107,14,232,0.7)]">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-slate-800">
-              <span className="text-blue-600">IT</span>Career
+              <span className="text-[var(--main-two-color)]">IT</span>Career
             </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("program")}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-400 hover:text-[var(--main-two-color)] transition-colors"
             >
               Програма
             </button>
             <button
               onClick={() => scrollToSection("cases")}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-400 hover:text-[var(--main-two-color)] transition-colors"
             >
               Кейси
             </button>
             <button
               onClick={() => scrollToSection("author")}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-400 hover:text-[var(--main-two-color)] transition-colors"
             >
               Автор
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-slate-400 hover:text-[var(--main-two-color)] transition-colors"
             >
               Тарифи
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium"
+              className="bg-[var(--main-two-color)] text-white px-6 py-2 rounded-full hover:bg-[var(--main-two-color)]/80 transition-colors font-medium"
             >
               Записатися
             </button>

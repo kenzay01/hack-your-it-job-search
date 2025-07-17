@@ -6,6 +6,7 @@ import {
   Clock,
   Users,
   CheckCircle,
+  ArrowDown,
 } from "lucide-react";
 
 const TargetAudienceSection = () => {
@@ -18,7 +19,9 @@ const TargetAudienceSection = () => {
         "Боїшся технічних співбесід: навіть знаючи відповідь, стресуєш або провалюєш їх",
         "Немає друзів, які можуть допомогти з працевлаштуванням, і ти думаєш, що роботу «роздають по блату»",
       ],
-      color: "from-green-400 to-green-600",
+      bgColor:
+        "bg-radial-[at_90%_90%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
+      // color: "from-green-400 to-green-600",
     },
     {
       icon: Briefcase,
@@ -28,7 +31,9 @@ const TargetAudienceSection = () => {
         "Хочеш працювати на крутих проектах, але не розумієш які скіли потрібно для цього мати",
         "Важко зрозуміти, скільки ти реально коштуєш, і як правильно називати бажану зарплату на співбесіді",
       ],
-      color: "from-yellow-400 to-orange-500",
+      bgColor:
+        "bg-radial-[at_90%_10%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
+      // color: "from-yellow-400 to-orange-500",
     },
     {
       icon: Crown,
@@ -38,7 +43,9 @@ const TargetAudienceSection = () => {
         "Не розумієш як саме тобі перескочити на $4-5k+",
         "Потрібен план «20% теорії → 80% результату», а не 50-годинна енциклопедія",
       ],
-      color: "from-purple-400 to-purple-600",
+      bgColor:
+        "bg-gradient-to-bl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
+      // color: "from-purple-400 to-purple-600",
     },
     {
       icon: Clock,
@@ -48,7 +55,9 @@ const TargetAudienceSection = () => {
         "Кар'єрні консультації не допомагають, а чекати «поки знайдеш роботу» не варіант",
         "Шукаєш чіткий план перевірений досвідом і часом, щоб закривати конкретні цілі щодня",
       ],
-      color: "from-red-400 to-red-600",
+      bgColor:
+        "bg-gradient-to-tl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
+      // color: "from-red-400 to-red-600",
     },
     {
       icon: Users,
@@ -58,7 +67,9 @@ const TargetAudienceSection = () => {
         "Потрібен «сейф»-чат, де можна кинути чернетку CV без хейту",
         "Розумієте, що нетворк == майбутні офери",
       ],
-      color: "from-blue-400 to-blue-600",
+      bgColor:
+        "bg-gradient-to-br from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
+      // color: "from-blue-400 to-blue-600",
     },
   ];
 
@@ -69,16 +80,7 @@ const TargetAudienceSection = () => {
   };
 
   return (
-    <section className="relative pt-16 bg-gradient-to-br from-blue-600 to-blue-800">
-      <div className="absolute top-0 left-0 w-full">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="w-full h-12 fill-white rotate-180"
-        >
-          <path d="M0,120 C150,40 350,120 600,80 C850,40 1050,120 1200,80 L1200,120 Z" />
-        </svg>
-      </div>
+    <section className="relative pt-16 bg-[var(--secondary-color)] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
@@ -87,30 +89,34 @@ const TargetAudienceSection = () => {
               Цей марафон для тебе, якщо:
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Перевір себе за цими 5 категоріями. Якщо хоч 2 пункти про тебе –
-              зустрінемось на марафоні
+              Перевір себе за цими 5 категоріями.{" "}
+              <span className="text-[var(--main-two-color)]">
+                Якщо хоч 2 пункти про тебе – зустрінемось на марафоні
+              </span>
             </p>
           </div>
 
           {/* Target Categories */}
-          <div className="space-y-6 mb-12">
+          <div className="space-y-8 mb-12">
             {targetCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
                 <div
                   key={index}
-                  className={`bg-gray-50 rounded-2xl p-3 hover:shadow-lg transition-all duration-300 w-242 ${getMarginClass(
+                  className={`${
+                    category.bgColor
+                  } rounded-2xl p-3 hover:shadow-lg transition-all duration-300 w-242  ${getMarginClass(
                     index
-                  )} hover:translate-x-2 hover:border-blue-900 border-4 border-transparent`}
+                  )} hover:translate-x-2 border border-gray-200`}
                 >
                   <div className="flex items-start space-x-6">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center flex-shrink-0`}
+                      className={`w-14 h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0`}
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-8 h-8 text-[var(--main-two-color)]" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900">
+                      <h3 className="text-2xl font-bold text-white">
                         {index + 1}. {category.title}
                       </h3>
                       <ul className="">
@@ -119,8 +125,8 @@ const TargetAudienceSection = () => {
                             key={problemIndex}
                             className="flex items-center justify-start space-x-2"
                           >
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                            <p className="text-gray-600 pt-3">{problem}</p>
+                            <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-3 flex-shrink-0"></div>
+                            <p className="text-gray-300 pt-3">{problem}</p>
                           </li>
                         ))}
                       </ul>
@@ -132,11 +138,12 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-white/10 rounded-3xl p-8 md:p-12 text-white text-center border-4 border-blue-500 hover:border-white/25 transition-all duration-300 hover:scale-102">
+          <div className="bg-gradient-to-tl from-[var(--main-color)]/60 via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">
                 Якщо хоч 2 пункти про вас
               </h3>
+              <ArrowDown className="w-6 h-6 mx-auto mb-2" />
               <p className="text-xl text-blue-100 mb-8">
                 зустрінемось на марафоні й закриємо ваші потреби за 14 днів
               </p>

@@ -15,47 +15,64 @@ const WhyItWorksSection = () => {
       title: "20% зусиль → 80% результату",
       description:
         "Лишаємо лише теми, які реально питають на UA/EU-співбесідах – без академічної «води».",
+      bgColor:
+        "bg-gradient-to-br from-[var(--main-color)]/60 to-[var(--main-two-color)] text-white",
+      textColor: "text-white",
     },
     {
       icon: CheckCircle,
       title: "Лише реальні підходи",
       description:
         "Ми даємо лише реальні теми та підходи які працюють у мене та моїх студентів – я не буду вам наливати воду у форматі кар'єрних консультацій.",
+      bgColor: "bg-white text-[var(--secondary-color)]",
+      textColor: "text-[var(--secondary-color)]",
     },
     {
       icon: Bolt,
       title: "14-денний жорсткий спринт",
       description:
         "Менше прокрастинації, більше дій, максимум результату у вигляді інформації.",
+      bgColor: "bg-white text-[var(--secondary-color)]",
+      textColor: "text-[var(--secondary-color)]",
     },
     {
       icon: RefreshCw,
       title: "Метод «покажи → зроби → отримай фідбек»",
       description: "Спершу демо, далі ваша практика, потім детальний фідбек.",
+      bgColor: "bg-white text-[var(--secondary-color)]",
+      textColor: "text-[var(--secondary-color)]",
     },
     {
       icon: Award,
       title: "Фокус на результат",
       description:
         "Моя задача довести тебе до жирного оферу, а не видати черговий диплом.",
+      bgColor: "bg-white text-[var(--secondary-color)]",
+      textColor: "text-[var(--secondary-color)]",
     },
     {
       icon: DollarSign,
       title: "Гарантія без ризику",
       description:
         "Не створили або не покращили свою систему пошуку роботи – повернемо гроші протягом 7 днів, без зайвих запитань.",
+      bgColor:
+        "bg-radial to-[var(--secondary-color)] from-gray-500/30 text-white",
+      textColor: "text-white",
     },
   ];
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-blue-600 to-blue-800">
+    <section className="relative py-16 bg-">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Чому цей марафон працює:
           </h2>
           <p className="text-xl text-blue-100">
-            Наш підхід – «20% зусиль → 80% результату»
+            Наш підхід –{" "}
+            <span className="text-[var(--main-two-color)]">
+              «20% зусиль → 80% результату»
+            </span>
           </p>
         </div>
 
@@ -63,15 +80,17 @@ const WhyItWorksSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/10 p-6 rounded-xl border-2 border-blue-500 hover:shadow-lg transition-all duration-300 hover:border-blue-400 h-full group"
+              className={`${feature.bgColor} p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 h-full group`}
             >
-              <div className="text-4xl mb-4 text-white group-hover:scale-105 transition-transform duration-300">
-                <feature.icon color="white" size={48} />
+              <div className="text-4xl mb-4  group-hover:scale-105 transition-transform duration-300">
+                <feature.icon className={`${feature.textColor}`} size={48} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:scale-102 transition-transform duration-300">
+              <h3
+                className={`text-xl font-bold ${feature.textColor}  mb-3 group-hover:scale-102 transition-transform duration-300`}
+              >
                 {feature.title}
               </h3>
-              <p className="text-blue-100 leading-relaxed">
+              <p className={`${feature.textColor} leading-relaxed`}>
                 {feature.description}
               </p>
             </div>
@@ -79,7 +98,7 @@ const WhyItWorksSection = () => {
         </div>
 
         {/* Додаткова інформація */}
-        <div className="mt-12 bg-white/10 rounded-2xl p-8 text-center border-2 border-blue-500 hover:scale-102 transition-transform duration-300">
+        <div className="mt-12 bg-radial-[at_90%_120%] from-[var(--main-two-color)]  to-[var(--secondary-color)] to-60% rounded-2xl p-8 text-center border border-gray-200 hover:scale-101 transition-transform duration-300">
           <h3 className="text-2xl font-bold text-white mb-4">
             Що гарантує результат:
           </h3>
@@ -120,7 +139,7 @@ const WhyItWorksSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full">
+      {/* <div className="absolute bottom-0 left-0 w-full">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
@@ -128,7 +147,7 @@ const WhyItWorksSection = () => {
         >
           <path d="M0,120 C150,40 350,120 600,80 C850,40 1050,120 1200,80 L1200,120 Z" />
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 };
