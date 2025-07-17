@@ -1,12 +1,22 @@
 import React from "react";
 import { ArrowRight, Star, Zap } from "lucide-react";
 import Image from "next/image";
-import heroImage from "@/public/heroSection.jpg";
-import heroImagePng from "@/public/heroSection-removebg-preview.png"; // Replace with actual image path
+import logo1 from "@/public/Csharp.png";
+import logo2 from "@/public/JS.png"; // Replace with actual image path
 import heroImgPng from "@/public/heroSection-Photoroom.png"; // Replace with actual image path
 const HeroSection = () => {
   return (
     <section className="relative bg-transparent text-white z-0">
+      <Image
+        src={logo1}
+        alt="Logo 1"
+        className="absolute top-62 left-168 w-28 h-auto z-20 -rotate-20 drop-shadow-2xl"
+      />
+      <Image
+        src={logo2}
+        alt="Logo 2"
+        className="absolute top-55 right-50 w-28 h-auto z-20 rotate-18 drop-shadow-2xl"
+      />
       <div className="absolute top-13 right-38 w-132 h-auto drop-shadow-[0px_20px_75px_rgb(107,14,232,0.5)]">
         <Image
           src={heroImgPng}
