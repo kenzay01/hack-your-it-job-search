@@ -10,7 +10,7 @@ const HeroSection = () => {
       <Image
         src={logo1}
         alt="Logo 1"
-        className="absolute top-62 left-168 w-28 h-auto z-20 -rotate-20 drop-shadow-2xl"
+        className="absolute top-56 right-126 w-28 h-auto z-20 -rotate-30 drop-shadow-2xl"
       />
       <Image
         src={logo2}
