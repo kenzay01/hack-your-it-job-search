@@ -131,7 +131,7 @@ Telegram: ${data.telegram}
                 htmlFor="name"
                 className="block text-sm font-medium text-blue-100"
               >
-                Твоє ім'я
+                Твоє ім`я
               </label>
               <input
                 type="text"

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Star, Zap } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import logo1 from "@/public/Csharp.png";
 import logo2 from "@/public/JS.png";
