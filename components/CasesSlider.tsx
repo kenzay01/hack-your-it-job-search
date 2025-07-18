@@ -1,28 +1,31 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ArrowBigRightDash } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Image from "next/image";
+// import case1 from "@/public/cases/case1.JPG"; // Replace with actual image paths
+import case1 from "@/public/cases/case1.jpg";
+import case2 from "@/public/cases/case2.jpg";
+import case3 from "@/public/cases/case3.jpg";
+import case4 from "@/public/cases/case4.jpg";
+import case5 from "@/public/cases/case5.jpg";
+import case6 from "@/public/cases/case6.jpg";
+import case7 from "@/public/cases/case7.jpg";
+import case8 from "@/public/cases/case8.jpg";
+import case9 from "@/public/cases/case9.jpg";
+import case10 from "@/public/cases/case10.jpg";
+import case11 from "@/public/cases/case11.jpg";
 
 const CasesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const cases = [
-    {
-      name: "Денис",
-      position: "Middle .NET Developer",
-      salary: "2200$+",
-      pointA:
-        "Працював 1 рік в аутсорс-компанії, куди потрапив після стажування. Технічний розвиток зупинився, проект себе вичерпав, а нового не давали. Високий темп, проблемні процеси та нервове середовище. Прийшов з запитом систематизувати знання та отримати офер на Middle-позицію.",
-      pointB:
-        "Отримав офер у відому українську продуктову компанію на сучасний проект зі стеком, який йому цікавий. Позиція .NET Developer зі ставкою $2200 net. Всі етапи співбесіди пройшов впевнено, оскільки знання були систематизовані, а не просто завчені модні терміни.",
-      additional:
-        "Денис пройшов навчання вдруге, щоб прокачати себе на рівень Middle. Наполеглива робота, чітка структура та правильний фокус допомогли досягти результату та отримати бажаний офер.",
-    },
     {
       name: "Артур",
       position: "Middle .NET Developer",
       salary: "2500$ + 1000$ part-time",
+      image: case1,
       pointA:
         "Рік тому прийшов без досвіду на групове наставництво. Завдяки навчанню отримав перший офер на позицію Trainee .NET Developer із зарплатою 300$.",
       pointB:
@@ -35,69 +38,124 @@ const CasesSlider = () => {
       ],
     },
     {
-      name: "Євген",
-      position: "Senior .NET Developer",
-      salary: "5600€",
+      name: "Денис",
+      position: "Middle .NET Developer",
+      salary: "2200$+",
+      image: case2,
       pointA:
-        "Євген звернувся з досвідом, але без актуальної практики – 2,5 роки не проходив співбесіди, а ринок за цей час суттєво змінився. Живе в Польщі, попередня ЗП – 23 000 злотих (~5300€), але не був упевнений, що зможе претендувати на аналогічну або вищу суму. Запит: підготуватися до співбесід на синьйорські позиції, закрити технічні прогалини, повернути впевненість.",
+        "Працював 1 рік в аутсорс-компанії, куди потрапив після стажування. Технічний розвиток зупинився, проект себе вичерпав, а нового не давали. Високий темп, проблемні процеси та нервове середовище. Прийшов з запитом систематизувати знання та отримати офер на Middle-позицію.",
       pointB:
-        "За 1,5 місяці індивідуального менторства Євген отримав мініпроєкт для прокачки технологій, які активно питають на співбесідах; пройшов серію мок-інтерв'ю з розбором теорії; попрацював над архітектурними задачами; отримав доступ до навчальних матеріалів і каналів, які допомогли підтягнути слабкі місця.",
+        "Отримав офер у відому українську продуктову компанію на сучасний проект зі стеком, який йому цікавий. Позиція .NET Developer зі ставкою $2200 net. Всі етапи співбесіди пройшов впевнено, оскільки знання були систематизовані, а не просто завчені модні терміни.",
       additional:
-        "Євген отримав сильний офер на позицію Senior Developer – 5600€ (і сам зізнається, що міг просити ще більше, але обрав стабільність і впевненість у пропозиції).",
+        "Денис пройшов навчання вдруге, щоб прокачати себе на рівень Middle. Наполеглива робота, чітка структура та правильний фокус допомогли досягти результату та отримати бажаний офер.",
     },
     {
-      name: "Олександр",
-      position: "FullStack JS Developer",
-      salary: "5700$",
+      name: "Віктор",
+      position: "Trainee .NET Developer",
+      salary: "Оплачуване стажування",
+      image: case3,
       pointA:
-        "Застряг на проєкті без перспективи розвитку, де він вигорав від обов'язків, ЗП ~3500$. Головними проблемами були: проєкт з відсутністю нормальних процесів та досвідчених розробників; потреба в швидкому вивченні Backend для роботи; нерозуміння як шукати роботу на кращі умови.",
+        "Студент, мав непоганий багаж знань, але недостатній для першої роботи, плюс невпевненість у своїх силах.",
       pointB:
-        "Офер на 5700$ на проєкт з клаудом/мікросервісами, у великій компанії та краще поставленими процесами. За 4 місяці навчання перепакував досвід з Frontend у FullStack розробника, підтягнув фундаментальні речі по Backend: різні виду архітектур, SQL/NoSQL, трішки клауду, System Design.",
+        "У квітні 2024 року отримав офер на Trainee .NET Developer, зараз проходить оплачуваний випробувальний період.",
       additional:
-        "Це дозволило Олександру вийти на 5700$, швидко втягнутися у BE, та знайти офер в топову польську компанію з купою інших досвідчених розробників, де у нього буде менше напрягів через процеси + більше простору для розвитку.",
+        "Навчання почали у січні 2024 року. Завдяки щоденній плідній праці за 3 місяці Віктор отримав свій перший офер на оплачуване стажування. До цього пройшов кілька технічних співбесід і виконав тестове завдання. Впевненість у собі – ключ до успіху.",
     },
     {
-      name: "Єгор",
-      position: "Senior Frontend Developer",
-      salary: "4500$",
-      pointA:
-        "Єгор прийшов на індивідуальне менторство до Олександра та Дмитра вже сильним мідлом, з досвідом. Запит: докачати скіли до рівня Senior та вивчити бекенд, щоб згодом працювати як Full-Stack.",
-      pointB:
-        "У процесі менторства Єгор підтягнув архітектурне мислення та розширив технічний кругозір; отримав офер на позицію Senior Frontend Developer з зарплатою $4500; продовжує навчання, щоб упевнено перейти у Full-Stack з акцентом на бекенд (C# / .NET).",
-      highlights: [
-        "Прийшов «доганяти» бекенд, а вже на фоні навчання вийшов на рівень Senior",
-        "Не зупинився на офері – продовжує навчання, бо бачить перспективу в Full-Stack",
-        "Кейс, коли досвід + точковий апгрейд = швидкий кар'єрний прорив",
-      ],
-    },
-    {
-      name: "Марина",
-      position: "Junior Full Stack Developer",
-      salary: "500$",
-      pointA:
-        "Під час навчання в університеті Марина здобула базові знання з C#/.NET та інших мов, а також пройшла курс від SoftServe. Попри це, відчувалась нестача системності – знання були фрагментарі, а це гальмувало старт кар'єри в IT. Запит: систематизувати знання, заповнити прогалини та почати пошук першої комерційної роботи.",
-      pointB:
-        "Під час наставництва Марина якісно прокачала технічні скіли, розклала все по поличках і додатково здобула нові знання. Оформила профіль на LinkedIn – і майже одразу почала отримувати запити від рекрутерів. Після завершення навчання вийшла на активний пошук і вже після першої технічної співбесіди отримала офер у продуктовій українській компанії на позицію Junior Full Stack Developer з компенсацією $500.",
-    },
-    {
-      name: "Давид",
+      name: "Маша",
       position: "Junior .NET Developer",
-      salary: "800$",
+      salary: "500€",
+      image: case4,
       pointA:
-        "Давид прийшов на навчання з базовими знаннями .NET, які здобув в університеті та на курсах EPAM. Однак, йому бракувало розуміння реальних робочих процесів, практичного досвіду та чіткої структури знань для впевненого виходу на ринок праці.",
+        "Самостійне навчання без структури, багато прогалин у знаннях. Не мала реального комерційного досвіду роботи. Брак впевненості в собі через відсутність практики. Основний запит – зрозуміти, які навички потрібні для отримання оферу та як вибудувати кар’єрний розвиток.",
       pointB:
-        "На третьому місяці навчання Давид отримав офер на позицію Junior .NET Developer із зарплатою 800$. Він суттєво прокачав технічні навички та набув впевненості у своїх силах, що допомогло йому успішно стартувати кар'єру в IT.",
+        "Виконала проєкт з інтеграцією ChatGPT у Discord, розробила backend-частину платформи. Отримала перший дохід – 1,000$ за реалізацію проєкту. Закрила прогалини у знаннях, побудувала сильну базу. Прокачала навички backend-розробки та навчилася вирішувати реальні завдання. Оформила LinkedIn і отримує запрошення на співбесіди. Стала впевненішою та зрозуміла, як досягати цілей. У травні 2025 року отримала офер на Junior .NET позицію з зарплатою 500€.",
       additional:
-        "На наставництві Давид отримав не лише технічні знання, а й необхідні скіли для успішного проходження співбесід. Завдяки індивідуальному підходу ментора Олександра, навчання стало набагато ефективнішим за звичайні курси, оскільки дозволяло одразу закривати пробіли та отримувати практичні поради.",
+        "Під час навчання Маша отримала свій перший комерційний досвід, заробивши 1000$, та значно прокачала свої навички. Хоча спочатку не шукала повноцінний офер, зараз активно отримує запрошення на співбесіди.",
+    },
+    {
+      name: "Влад",
+      position: "Junior Full-Stack .NET Developer",
+      salary: "$800 → $900",
+      image: case5,
+      pointA:
+        "Прийшов на навчання школярем з гарним рівнем англійської та базовими знаннями в C#/.NET і ASP.NET Core. Запит: набити практику, підтягнути Advanced-теми та підготуватись до першого працевлаштування в IT.",
+      pointB:
+        "Ще під час наставництва у липні 2024 отримав пропозицію на стажування Trainee .NET Developer. Продовжив навчання, вступив до університету. У травні 2025 року отримав офер на позицію Junior Full-Stack .NET Developer: $800 gross на випробувальний період, $900 після його проходження.",
+      highlights: [
+        "Наймолодший студент: отримав перший офер у 17 років (зараз 18)",
+        "Другий офер – на першому курсі ВНЗ, на позицію Junior Full-Stack",
+        "Збільшив дохід та отримав два офери протягом року з переходом у комерційну розробку",
+      ],
     },
     {
       name: "Рома",
       position: "Junior .NET Developer",
       salary: "450$",
+      image: case6,
       pointA:
-        "Рома прийшов на навчання з мінімальними знаннями в програмуванні: трохи знайомий із Java і C#, але без поглибленого розуміння та практичного досвіду.",
+        "Прийшов на навчання з мінімальними знаннями в програмуванні: трохи знайомий із Java і C#, але без поглибленого розуміння та практичного досвіду.",
       pointB:
-        "Через декілька місяців навчання Рома отримав офер у стартапі із зарплатою 450$; почав активно отримувати запрошення на співбесіди в інші компанії; зрозумів важливість побудови фундаменту знань (базових принципів) і тепер продовжує розвивати навички; навчився працювати із вимогами, розуміти, що потрібно від нього як розробника, і як це втілити в коді.",
+        "Через декілька місяців навчання отримав офер у стартапі із зарплатою 450$. Почав активно отримувати запрошення на співбесіди в інші компанії. Зрозумів важливість побудови фундаменту знань і продовжує розвивати навички. Навчився працювати із вимогами та втілювати їх у коді.",
+    },
+    {
+      name: "Нікіта",
+      position: "Middle .NET Developer",
+      salary: "4000$",
+      image: case7,
+      pointA:
+        "Зарплата джуна при 3 роках досвіду – 1200$. Робота на проекті без розвитку, нерозуміння, куди рухатися далі. Відсутність необхідних hard skills для Middle-позицій. Хотів покращити навички, отримати нові знання та крутіший офер.",
+      pointB:
+        "Через місяць навчання отримав офер на 2800$. Згодом змінив роботу ще раз – отримав контракт на 4000$. Вийшов на рівень Middle .NET Developer. Прокачав хард скіли, змінив підхід до роботи, став упевненішим у собі.",
+      additional:
+        "На особистому менторстві глибоко пропрацювали hard skills, перепакували досвід і дали чітке розуміння вимог для Middle-позиції. Завдяки структурованому підходу та наполегливій роботі Нікіта суттєво збільшив дохід і отримав цікавіший проєкт.",
+    },
+    {
+      name: "Антон",
+      position: "Middle .NET Developer",
+      salary: "2000$",
+      image: case8,
+      pointA:
+        "Працював на позиції Junior .NET Developer протягом 2 років із зарплатою 500$. Застряг на проекті, який не давав розвитку. Чіткий запит – знайти нову роботу для професійного зростання та покращення зарплати.",
+      pointB:
+        "Через 3 місяці навчання отримав офер на позицію Middle .NET Developer із зарплатою 2000$ чистими. Опанував мікросервіси, роботу з клаудом, Kafka, Kubernetes, писав якісніший код. Допомогли з підготовкою резюме та LinkedIn.",
+      additional:
+        "На кожному етапі навчання Антон отримував підтримку, відповіді на запитання від вибору технологій до оформлення проектів. Завдяки наполегливій роботі та співпраці збільшив ЗП у 4 рази за три місяці.",
+    },
+    {
+      name: "Антон",
+      position: "Senior .NET Developer",
+      salary: "4000$+",
+      image: case9,
+      pointA:
+        "Мав багатий досвід роботи на C#/.NET, але засидівся на проєкті з CRM Creatio, нішевою технологією.",
+      pointB:
+        "Почали роботу у квітні 2024 року, а у лютому отримав офер у 'Дію'. Підтягнули теорію та підготувалися до співбесід на класичні Backend-позиції на ASP.NET Core, що дозволило знайти роботу на кращий стек і більші гроші.",
+      additional: "Інвестиція в курс окупилася в перший місяць нової роботи.",
+    },
+    {
+      name: "Олександр",
+      position: "FullStack JS Developer",
+      salary: "5700$",
+      image: case10,
+      pointA:
+        "Застряг на проєкті без перспективи розвитку, де вигорав від обов'язків, ЗП ~3500$. Проблеми: проєкт без нормальних процесів і досвідчених розробників, потреба в швидкому вивченні Backend, нерозуміння пошуку кращих умов.",
+      pointB:
+        "Офер на 5700$ на проєкт з клаудом/мікросервісами у великій компанії з кращими процесами. За 4 місяці навчання перепакував досвід з Frontend у FullStack, підтягнув Backend: архітектури, SQL/NoSQL, клауд, System Design.",
+      additional:
+        "Це дозволило вийти на 5700$, втягнутися у BE та знайти офер у топову польську компанію з досвідченими розробниками, меншими напругами через процеси та більшим простором для розвитку.",
+    },
+    {
+      name: "Олександр",
+      position: "Junior FullStack Developer",
+      salary: "400+$",
+      image: case11,
+      pointA:
+        "Студент, дуже базові знання по C#. Міг створювати лише базові консольні додатки.",
+      pointB:
+        "У липні 2023 року отримав перший офер у невеличку компанію. Згодом отримав офер на 700$+ на проєкт із замовником із США.",
+      additional:
+        "Почали роботу у січні 2023 року. Пройшли широкий роадмап, який дозволив Олександру отримати два офери та перейти у комерційну розробку.",
     },
   ];
 
@@ -109,146 +167,247 @@ const CasesSlider = () => {
     setCurrentSlide((prev) => (prev - 1 + cases.length) % cases.length);
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   const currentCase = cases[currentSlide];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Кейси</h2>
-          <p className="text-xl text-gray-600">
-            Реальні історії успіху наших студентів
-          </p>
-        </div>
-
-        <div className="relative">
-          {/* Основний контент слайду */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            {/* Заголовок кейсу */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 flex items-end justify-between gap-4">
-              <div className="flex flex-col">
-                <h3 className="text-3xl font-bold">{currentCase.name}</h3>
-                <p className="text-xl opacity-90">{currentCase.position}</p>
-              </div>
-              <p className="text-2xl font-semibold">ЗП: {currentCase.salary}</p>
-            </div>
-
-            {/* Контент з точками А і Б */}
-            <div className="p-8">
-              <div className="flex gap-8 items-center">
-                {/* Точка А */}
-                <div className="space-y-4 flex-1">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                      <span className="text-red-600 font-bold text-lg">А</span>
-                    </div>
-                    <h4 className="text-2xl font-bold text-gray-900">
-                      Точка А
-                    </h4>
-                  </div>
-                  <div className="bg-red-50 p-4 rounded-xl border-l-4 border-red-500">
-                    <p className="text-gray-700 leading-relaxed">
-                      {currentCase.pointA}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Стрілочка */}
-                <div className="flex justify-center lg:justify-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <ArrowBigRightDash className="w-12 h-12 text-blue-600" />
-                  </div>
-                </div>
-
-                {/* Точка Б */}
-                <div className="space-y-4 lg:order-3 flex-1">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <span className="text-green-600 font-bold text-lg">
-                        Б
-                      </span>
-                    </div>
-                    <h4 className="text-2xl font-bold text-gray-900">
-                      Точка Б
-                    </h4>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-xl border-l-4 border-green-500">
-                    <p className="text-gray-700 leading-relaxed">
-                      {currentCase.pointB}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Додаткова інформація */}
-              {currentCase.additional && (
-                <div className="mt-8 bg-blue-50 p-4 rounded-xl border-l-4 border-blue-500">
-                  <p className="text-gray-800 font-medium leading-relaxed">
-                    {currentCase.additional}
-                  </p>
-                </div>
-              )}
-
-              {/* Highlights */}
-              {currentCase.highlights && (
-                <div className="mt-8">
-                  <h5 className="text-lg font-semibold text-gray-900 mb-4">
-                    З цікавого:
-                  </h5>
-                  <ul className="space-y-2">
-                    {currentCase.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-700 leading-relaxed">
-                          <strong>{highlight}</strong>
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+    <>
+      <section
+        id="cases"
+        className="py-8 md:py-16 bg-[var(--secondary-color)] min-h-screen"
+      >
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-5xl font-bold text-white">Кейси</h1>
+            <div className="flex gap-4">
+              <button
+                onClick={prevSlide}
+                className="w-12 h-12 bg-white rounded-lg items-center justify-center hover:bg-gray-100 transition-colors hidden md:flex"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-700" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="w-12 h-12 bg-white rounded-lg  items-center justify-center hover:bg-gray-100 transition-colors hidden md:flex"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-700" />
+              </button>
             </div>
           </div>
-          {/* Навігація */}
-          <div className="flex justify-center items-center mt-8">
-            {/* Індикатори */}
-            <div className="flex space-x-2">
+
+          {/* Mobile Layout */}
+          <div className="md:hidden">
+            <div className="flex justify-end mb-4">
+              <button
+                onClick={prevSlide}
+                className="w-10 h-10 bg-white rounded-lg flex items-center justify-center mr-2 hover:bg-gray-100 transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-700" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-700" />
+              </button>
+            </div>
+            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl border border-gray-200 mb-4">
+              <div className="relative w-full h-64">
+                <Image
+                  src={currentCase.image}
+                  alt={currentCase.name}
+                  fill
+                  quality={60}
+                  loading="lazy"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4 bg-gradient-to-bl from-[var(--main-color)] via-[var(--main-two-color)] via-20% to-[var(--secondary-color)] text-white">
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  {currentCase.name}
+                </h2>
+                <div className="mb-4">
+                  <h3 className="text-base font-semibold text-white mb-1">
+                    Точка А
+                  </h3>
+                  <p className="text-gray-300 text-sm">{currentCase.pointA}</p>
+                  <h3 className="text-base font-semibold text-white mb-1 mt-2">
+                    Точка Б
+                  </h3>
+                  <p className="text-gray-300 text-sm">{currentCase.pointB}</p>
+                </div>
+                <button
+                  onClick={openModal}
+                  className="bg-[var(--main-two-color)] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors w-full"
+                >
+                  Детальніше
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-center gap-2 mb-6">
               {cases.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? "bg-blue-600" : "bg-gray-300"
+                    index === currentSlide
+                      ? "bg-white"
+                      : "bg-[var(--main-two-color)] opacity-50"
                   }`}
                 />
               ))}
             </div>
           </div>
 
-          {/* Лічильник */}
-          <div className="text-center mt-4">
-            <span className="text-gray-500">
-              {currentSlide + 1} з {cases.length}
-            </span>
+          {/* Desktop Layout */}
+          <div className="hidden md:block">
+            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl h-[500px] flex border border-gray-200">
+              {/* Left side - Photo */}
+              <div className="w-1/3 relative">
+                <Image
+                  src={currentCase.image}
+                  alt={currentCase.name}
+                  width={400}
+                  height={500}
+                  quality={60}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right side - Content */}
+              <div className="w-2/3 p-12 flex flex-col justify-between bg-gradient-to-bl from-[var(--main-color)] via-[var(--main-two-color)] via-20% to-[var(--secondary-color)] text-white">
+                <div>
+                  <h2 className="text-4xl font-bold text-white mb-2">
+                    {currentCase.name}
+                  </h2>
+                  <div className="mb-8 flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Точка А
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-4">
+                      {currentCase.pointA}
+                    </p>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Точка Б
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
+                      {currentCase.pointB}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={openModal}
+                  className="bg-[var(--main-two-color)] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors self-start"
+                >
+                  Детальніше
+                </button>
+              </div>
+            </div>
+
+            {/* Indicators */}
+            <div className="flex justify-start mt-6 gap-2 px-4">
+              {cases.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide
+                      ? "bg-white"
+                      : "bg-[var(--main-two-color)] opacity-50"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Link to more cases */}
+            <div className="text-center mt-6">
+              <p className="text-white text-lg">
+                Дізнайтесь про інші кейси наших студентів на{" "}
+                <a
+                  href="https://troubled-glove-959.notion.site/dpuchkov-it-5e802642bfe74e98a9ab51464332caf1?pvs=25"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-[var(--main-two-color)] transition-colors"
+                >
+                  нашій сторінці
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        {/* Кнопки навігації */}
-        <div className="absolute top-100 left-0 right-0 flex justify-between transform px-4 w-full">
-          <button
-            onClick={prevSlide}
-            className="flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 p-1 rounded-xl border-2 border-blue-500 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-102"
-          >
-            <ChevronLeft className="w-8 h-8" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 p-1 rounded-xl border-2 border-blue-500 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-102"
-          >
-            <ChevronRight className="w-8 h-8" />
-          </button>
+      </section>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+          onClick={handleBackgroundClick}
+        >
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-8">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h2 className="text-3xl font-bold text-[var(--secondary-color)] mb-2">
+                    {currentCase.name}
+                  </h2>
+                  <p className="text-xl text-gray-600">
+                    {currentCase.position}
+                  </p>
+                  <p className="text-lg font-semibold text-[var(--main-two-color)] mt-2">
+                    ЗП: {currentCase.salary}
+                  </p>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="space-y-6">
+                {currentCase.additional && (
+                  <div className="bg-[var(--main-two-color)]/10 p-4 rounded-lg border-l-4 border-[var(--main-two-color)]">
+                    <p className="text-gray-700 leading-relaxed">
+                      {currentCase.additional}
+                    </p>
+                  </div>
+                )}
+
+                {currentCase.highlights && (
+                  <ul className="space-y-2">
+                    {currentCase.highlights.map((highlight, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-gray-700 leading-relaxed">
+                          {highlight}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 

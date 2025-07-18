@@ -21,7 +21,6 @@ const TargetAudienceSection = () => {
       ],
       bgColor:
         "bg-radial-[at_90%_90%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
-      // color: "from-green-400 to-green-600",
     },
     {
       icon: Briefcase,
@@ -33,7 +32,6 @@ const TargetAudienceSection = () => {
       ],
       bgColor:
         "bg-radial-[at_90%_10%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
-      // color: "from-yellow-400 to-orange-500",
     },
     {
       icon: Crown,
@@ -45,7 +43,6 @@ const TargetAudienceSection = () => {
       ],
       bgColor:
         "bg-gradient-to-bl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
-      // color: "from-purple-400 to-purple-600",
     },
     {
       icon: Clock,
@@ -57,7 +54,6 @@ const TargetAudienceSection = () => {
       ],
       bgColor:
         "bg-gradient-to-tl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
-      // color: "from-red-400 to-red-600",
     },
     {
       icon: Users,
@@ -69,7 +65,6 @@ const TargetAudienceSection = () => {
       ],
       bgColor:
         "bg-gradient-to-br from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
-      // color: "from-blue-400 to-blue-600",
     },
   ];
 
@@ -80,15 +75,15 @@ const TargetAudienceSection = () => {
   };
 
   return (
-    <section className="relative pt-16 bg-[var(--secondary-color)] text-white">
-      <div className="container mx-auto px-4">
+    <section className="relative pt-8 sm:pt-12 md:pt-16 bg-[var(--secondary-color)] text-white">
+      <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 uppercase px-2">
               Цей марафон для тебе, якщо:
             </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto px-2">
               Перевір себе за цими 5 категоріями.{" "}
               <span className="text-[var(--main-two-color)]">
                 Якщо хоч 2 пункти про тебе – зустрінемось на марафоні
@@ -97,7 +92,7 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Target Categories */}
-          <div className="space-y-8 mb-12">
+          <div className="space-y-4 md:space-y-8 mb-8 md:mb-12">
             {targetCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
@@ -105,28 +100,30 @@ const TargetAudienceSection = () => {
                   key={index}
                   className={`${
                     category.bgColor
-                  } rounded-2xl p-3 hover:shadow-lg transition-all duration-300 w-242  ${getMarginClass(
-                    index
-                  )} hover:translate-x-2 border border-gray-200`}
+                  } rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300 
+                  md:w-242 md:${getMarginClass(index)} md:hover:translate-x-2 
+                  border border-gray-200`}
                 >
-                  <div className="flex items-start space-x-6">
+                  <div className="flex items-start space-x-4 md:space-x-6">
                     <div
-                      className={`w-14 h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0`}
                     >
-                      <IconComponent className="w-8 h-8 text-[var(--main-two-color)]" />
+                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--main-two-color)]" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">
                         {index + 1}. {category.title}
                       </h3>
-                      <ul className="">
+                      <ul className="space-y-2 md:space-y-0">
                         {category.problems.map((problem, problemIndex) => (
                           <li
                             key={problemIndex}
-                            className="flex items-center justify-start space-x-2"
+                            className="flex items-start space-x-2 md:space-x-3"
                           >
-                            <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-3 flex-shrink-0"></div>
-                            <p className="text-gray-300 pt-3">{problem}</p>
+                            <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-2 md:mt-3 flex-shrink-0"></div>
+                            <p className="text-sm sm:text-base text-gray-300 pt-1 md:pt-3">
+                              {problem}
+                            </p>
                           </li>
                         ))}
                       </ul>
@@ -138,21 +135,21 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-gradient-to-tl from-[var(--main-color)]/60 via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101">
+          <div className="bg-gradient-to-tl from-[var(--main-color)]/60 via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
                 Якщо хоч 2 пункти про вас
               </h3>
               <ArrowDown className="w-6 h-6 mx-auto mb-2" />
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8 md:px-2">
                 зустрінемось на марафоні й закриємо ваші потреби за 14 днів
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto">
                   Приєднатися до марафону
                 </button>
-                <div className="flex items-center space-x-2 text-blue-100">
+                <div className="flex items-center space-x-2 text-blue-100 text-sm sm:text-base">
                   <CheckCircle className="w-5 h-5" />
                   <span>Гарантія результату</span>
                 </div>

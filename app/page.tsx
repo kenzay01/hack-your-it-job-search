@@ -9,16 +9,18 @@ import QuestionsSection from "../components/QuestionsSection";
 import GuaranteesSection from "../components/GuaranteesSection";
 import StartSection from "../components/StartSection";
 import PricingSection from "../components/PricingSection";
+import JobSearchMarathonSection from "@/components/JobSearchMarathonSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans overflow-x-hidden md:overflow-x-auto">
       <Header />
       <HeroSection />
       <MainOfferSection />
       <TargetAudienceSection />
       <AuthorSection />
       <WhyItWorksSection />
+      <JobSearchMarathonSection />
       <CasesSlider />
       <QuestionsSection />
       <GuaranteesSection />

@@ -45,7 +45,7 @@ const MainOfferSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-[var(--secondary-color)] z-100">
+    <section className="py-6 md:py-24 bg-[var(--secondary-color)] z-100">
       <div className="container mx-auto px-2">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -55,7 +55,7 @@ const MainOfferSection = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-6 mb-12 px-4 md:p-0">
             {targetGroups.map((group, index) => {
               const IconComponent = group.icon;
               return (
@@ -91,13 +91,13 @@ const MainOfferSection = () => {
             })}
           </div>
 
-          <div className="bg-gradient-to-br from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 md:p-12 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl">
-            <div className="text-center mb-8">
+          <div className="bg-gradient-to-br from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl py-6 px-4 md:p-12 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
+            <div className="text-center mb-4 md:mb-8">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 За 14 днів ти побудуєш власну систему, яка приводить до першого
                 офера
               </h3>
-              <p className="text-xl text-blue-100">
+              <p className="text-lg md:text-xl text-blue-100">
                 або дає +$6000 на рік до нинішньої зарплати
               </p>
             </div>
@@ -107,27 +107,29 @@ const MainOfferSection = () => {
                   key={index}
                   className="flex items-center space-x-4 justify-start"
                 >
-                  <div className="w-8 h-8  rounded-full flex items-center justify-center flex-shrink-0 drop-shadow-[0px_0px_4px_white]">
+                  <div className="md:w-8 md:h-8 w-6 h-6  rounded-full flex items-center justify-center flex-shrink-0 drop-shadow-[0px_0px_4px_white]">
                     <Image
                       src={checkImg}
                       alt="Check"
                       className="w-full h-full text-gray-900"
                     />
                   </div>
-                  <p className="text-blue-100 leading-relaxed">{result}</p>
+                  <p className="md:text-md text-sm text-blue-100 md:leading-relaxed">
+                    {result}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-gradient-to-tr from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-2xl p-8 shadow-lg hover:scale-101 transition-all duration-300">
+          <div className="bg-gradient-to-tr from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Результат: Одна чітка система
               </h3>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
                     <Target className="w-8 h-8 text-[var(--main-two-color)]" />
                   </div>
                   <h4 className="text-lg font-semibold text-white">
@@ -138,7 +140,7 @@ const MainOfferSection = () => {
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
                     <TrendingUp className="w-8 h-8 text-[var(--main-two-color)]" />
                   </div>
                   <h4 className="text-lg font-semibold text-white">
@@ -149,7 +151,7 @@ const MainOfferSection = () => {
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
                     <Award className="w-8 h-8 text-[var(--main-two-color)]" />
                   </div>
                   <h4 className="text-lg font-semibold text-white">
@@ -161,8 +163,8 @@ const MainOfferSection = () => {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2  hover:translate-x-2 mx-auto ">
-                <span>Хочу систему за 14 днів</span>
+              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-bold  hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto">
+                <span>Почати за 14 днів</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
