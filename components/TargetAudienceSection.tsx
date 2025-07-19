@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   User,
@@ -8,6 +10,7 @@ import {
   CheckCircle,
   ArrowDown,
 } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 
 const TargetAudienceSection = () => {
   const targetCategories = [
@@ -68,10 +71,15 @@ const TargetAudienceSection = () => {
     },
   ];
 
-  // Function to get margin class based on index
   const getMarginClass = (index: number) => {
-    const marginClasses = ["ml-0", "ml-8", "ml-16", "ml-24", "ml-32"];
-    return marginClasses[index] || "ml-0";
+    const marginClasses = [
+      "md:ml-0",
+      "md:ml-8",
+      "md:ml-16",
+      "md:ml-24",
+      "md:ml-32",
+    ];
+    return marginClasses[index % marginClasses.length] || "md:ml-0";
   };
 
   return (
@@ -101,7 +109,7 @@ const TargetAudienceSection = () => {
                   className={`${
                     category.bgColor
                   } rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300 
-                  md:w-242 md:${getMarginClass(index)} md:hover:translate-x-2 
+                  md:w-242 ${getMarginClass(index)} md:hover:translate-x-2 
                   border border-gray-200`}
                 >
                   <div className="flex items-start space-x-4 md:space-x-6">
@@ -146,9 +154,14 @@ const TargetAudienceSection = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto">
+                <ScrollLink
+                  to="questions"
+                  smooth={true}
+                  duration={500}
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                >
                   Приєднатися до марафону
-                </button>
+                </ScrollLink>
                 <div className="flex items-center space-x-2 text-blue-100 text-sm sm:text-base">
                   <CheckCircle className="w-5 h-5" />
                   <span>Гарантія результату</span>

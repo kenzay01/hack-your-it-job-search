@@ -42,6 +42,42 @@ const QuestionsSection = () => {
     }
   };
 
+  // Функція для відправки даних в Google Sheets
+  const sendToGoogleSheets = async (data: {
+    name: string;
+    phone: string;
+    telegram: string;
+    interest: string;
+  }) => {
+    try {
+      const response = await fetch("/api/google-sheets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          phone: data.phone,
+          telegram: data.telegram,
+          interest: data.interest,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `HTTP error: ${response.status}`);
+      }
+
+      return { success: true };
+    } catch (error) {
+      console.error("Error sending to Google Sheets:", error);
+      return {
+        success: false,
+        error: "Помилка при збереженні в Google Sheets",
+      };
+    }
+  };
+
   const sendToTelegram = async (data: {
     name: string;
     phone: string;
@@ -91,15 +127,38 @@ Telegram: ${data.telegram}
     }
 
     setSubmitStatus("Відправка...");
-    const result = await sendToTelegram(formData);
 
-    if (result.success) {
-      setSubmitStatus("Повідомлення успішно відправлено!");
-      setFormData({ name: "", phone: "", telegram: "", interest: "" });
-      setPhoneError("");
-      setTimeout(() => setSubmitStatus(""), 3000);
-    } else {
-      setSubmitStatus(result.error || "Помилка при відправці");
+    try {
+      // Відправляємо в обидва місця паралельно
+      const [telegramResult, sheetsResult] = await Promise.allSettled([
+        sendToTelegram(formData),
+        sendToGoogleSheets(formData),
+      ]);
+
+      const telegramSuccess =
+        telegramResult.status === "fulfilled" && telegramResult.value.success;
+      const sheetsSuccess =
+        sheetsResult.status === "fulfilled" && sheetsResult.value.success;
+
+      if (telegramSuccess && sheetsSuccess) {
+        setSubmitStatus("Дані успішно відправлено в Telegram та збережено!");
+        setFormData({ name: "", phone: "", telegram: "", interest: "" });
+        setPhoneError("");
+        setTimeout(() => setSubmitStatus(""), 3000);
+      } else if (telegramSuccess || sheetsSuccess) {
+        setSubmitStatus("Частково успішно: дані збережено, але є помилки");
+        console.error("Telegram result:", telegramResult);
+        console.error("Sheets result:", sheetsResult);
+      } else {
+        setSubmitStatus("Помилка при відправці та збереженні даних");
+        console.error("Both operations failed:", {
+          telegramResult,
+          sheetsResult,
+        });
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      setSubmitStatus("Неочікувана помилка при обробці запиту");
     }
   };
 

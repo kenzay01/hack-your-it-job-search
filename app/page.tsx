@@ -10,6 +10,7 @@ import GuaranteesSection from "../components/GuaranteesSection";
 import StartSection from "../components/StartSection";
 import PricingSection from "../components/PricingSection";
 import JobSearchMarathonSection from "@/components/JobSearchMarathonSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <GuaranteesSection />
       <StartSection />
       <PricingSection />
+      <Footer />
     </div>
   );
 }
