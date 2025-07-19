@@ -8,7 +8,7 @@ const QuestionsSection = () => {
     name: "",
     phone: "",
     telegram: "",
-    interest: "", // Нове поле для питання
+    interest: "",
   });
   const [phoneError, setPhoneError] = useState("");
   const [submitStatus, setSubmitStatus] = useState("");
@@ -18,7 +18,6 @@ const QuestionsSection = () => {
     let newValue = value;
 
     if (name === "telegram") {
-      // Prevent removing '@' and ensure it stays at the start
       if (!value.startsWith("@") || value === "") {
         newValue = "@" + value.replace(/^@+/, "");
       }
@@ -42,7 +41,6 @@ const QuestionsSection = () => {
     }
   };
 
-  // Функція для відправки даних в Google Sheets
   const sendToGoogleSheets = async (data: {
     name: string;
     phone: string;
@@ -129,7 +127,6 @@ Telegram: ${data.telegram}
     setSubmitStatus("Відправка...");
 
     try {
-      // Відправляємо в обидва місця паралельно
       const [telegramResult, sheetsResult] = await Promise.allSettled([
         sendToTelegram(formData),
         sendToGoogleSheets(formData),
@@ -165,9 +162,17 @@ Telegram: ${data.telegram}
   return (
     <section
       id="questions"
-      className="py-8 bg-[var(--secondary-color)] text-white relative"
+      className="pt-8 bg-[var(--secondary-color)] text-white relative overflow-hidden"
+      style={{
+        backgroundImage: `
+          linear-gradient(to bottom, var(--secondary-color) 0%, rgba(0, 0, 0, 0.4) 100%),
+          linear-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 2px, transparent 1px)
+        `,
+        backgroundSize: "100% 100%, 36px 36px, 36px 36px",
+      }}
     >
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 ">
         <div className="text-center mb-6">
           <h2 className="text-4xl font-bold mb-2">Залишилися запитання?</h2>
           <p className="text-lg md:text-xl text-blue-100 mb-4">
@@ -183,7 +188,7 @@ Telegram: ${data.telegram}
             <span>Або одразу пиши в підтримку Telegram</span>
           </a>
         </div>
-        <div className="max-w-md mx-auto bg-radial-[at_-20%_-20%] to-[var(--secondary-color)] to-75% from-[var(--main-color)] via-[var(--main-two-color)] rounded-2xl p-8 border border-gray-200">
+        <div className="max-w-md mx-auto bg-radial-[at_-20%_-20%] to-[var(--secondary-color)] to-75% from-[var(--main-color)] via-[var(--main-two-color)] rounded-2xl p-8 border border-gray-200 relative z-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label

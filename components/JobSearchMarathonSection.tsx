@@ -13,6 +13,15 @@ import {
   MessageSquare,
 } from "lucide-react";
 
+// Інтерфейс для об'єкта з вкладеними підпунктами
+interface SubItem {
+  main: string;
+  subItems: (string | SubItem)[];
+}
+
+// Тип для елементів категорії (рядок або об'єкт із subItems)
+type CategoryItem = string | { main: string; subItems: (string | SubItem)[] };
+
 const JobSearchMarathonSection = () => {
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>(
     {}
@@ -140,7 +149,7 @@ const JobSearchMarathonSection = () => {
             "Створення твоєї 'легенди'",
             "До яких питань потрібно готуватися",
             "Чому рекрутер - твій друг, а не ворог",
-            "Приклади `правильних` відповідей на типічні питання",
+            "Приклади `правильних` відповідей на типові питання",
           ],
         },
         {
@@ -175,7 +184,7 @@ const JobSearchMarathonSection = () => {
   ];
 
   const renderSubItems = (
-    subItems: Array<string | { main: string; subItems: any[] }>,
+    subItems: (string | SubItem)[],
     categoryIndex: number,
     itemIndex: number,
     level = 0
@@ -232,10 +241,7 @@ const JobSearchMarathonSection = () => {
     });
   };
 
-  const renderItems = (
-    items: Array<string | { main: string; subItems: any[] }>,
-    categoryIndex: number
-  ) => {
+  const renderItems = (items: CategoryItem[], categoryIndex: number) => {
     return items.map((item, itemIndex) => {
       if (typeof item === "object" && "main" in item) {
         const dropdownKey = `${categoryIndex}-${itemIndex}`;
