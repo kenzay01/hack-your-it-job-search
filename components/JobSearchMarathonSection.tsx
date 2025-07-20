@@ -181,7 +181,14 @@ const JobSearchMarathonSection = () => {
     },
   ];
 
-  const renderItems = (items: any[]) => {
+  type Item =
+    | string
+    | {
+        main: string;
+        subItems?: Item[];
+      };
+
+  const renderItems = (items: Item[]) => {
     return items.map((item, index) => {
       if (typeof item === "object" && "main" in item) {
         return (
