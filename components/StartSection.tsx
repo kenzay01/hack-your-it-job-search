@@ -61,7 +61,7 @@ const StartSection = () => {
             to="pricing"
             smooth={true}
             duration={500}
-            className="inline-flex bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl items-center space-x-2 cursor-pointer"
+            className="inline-flex bg-radial to-[var(--secondary-color)] from-gray-800/90 border border-gray-200 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl items-center space-x-2 cursor-pointer hover:scale-101"
           >
             <span>Хочу результат за 14 днів</span>
             <ArrowRight className="w-5 h-5" />
@@ -84,7 +84,7 @@ const StartSection = () => {
             to="pricing"
             smooth={true}
             duration={500}
-            className="inline-flex bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-4 rounded-lg font-bold text-base hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl items-center justify-center w-[calc(100%-2rem)] mx-4"
+            className="inline-flex bg-radial to-[var(--secondary-color)] from-gray-800/90 border border-gray-200 text-white px-6 py-4 rounded-lg font-bold text-base transition-all duration-300 shadow-lg hover:shadow-xl items-center justify-center w-[calc(100%-2rem)] mx-4"
           >
             <span>Хочу результат за 14 днів</span>
             <ArrowRight className="w-5 h-5 ml-2" />

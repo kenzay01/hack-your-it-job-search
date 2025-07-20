@@ -43,11 +43,15 @@ const AuthorSection = () => {
           {/* Права частина - інформація */}
           <div className="space-y-6 pt-4 lg:pt-24 text-center lg:text-left">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-3">
+              <h3 className="text-3xl font-bold text-white mb-3 custom-text">
                 Дмитро Пучков
               </h3>
-              <p className="text-lg lg:text-xl text-gray-200 font-semibold mb-4">
-                Senior .NET розробник з 7+ роками комерційного досвіду
+              <p className="text-lg lg:text-xl text-gray-200 font-semibold mb-4 ">
+                Senior .NET розробник з{" "}
+                <span className="underline decoration-[var(--secondary-color)]">
+                  7+ роками
+                </span>{" "}
+                комерційного досвіду
               </p>
             </div>
 

@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--secondary-color)] rounded-b-4xl drop-shadow-[0px_-10px_50px_rgb(107,14,232,0.7)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[var(--secondary-color)] rounded-b-4xl">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-gray-400">

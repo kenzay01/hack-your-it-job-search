@@ -14,15 +14,8 @@ body {
   background-color: var(--secondary-color);
 }
 
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-geist-sans);
-  }
+.custom-text {
+  font-family: var(--font-roboto);
 }
 
 * button {

@@ -91,21 +91,28 @@ const PricingSection = () => {
         </h2>
         <p className="text-center md:text-lg text-blue-100 mb-8">
           Для перших 48 год даємо{" "}
-          <span className="text-yellow-400">-20 $ / -25 $ / -30 $ </span> –
-          стимул швидкої оплати без знецінення базової ціни.
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            -20 $ / -25 $ / -30 ${" "}
+          </span>{" "}
+          – стимул швидкої оплати без знецінення базової ціни.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {tariffs.map((tariff, index) => (
             <div
               key={tariff.name}
-              className={`${radialYPositions[index]} to-[var(--secondary-color)] from-[var(--main-two-color)] border border-gray-200 text-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-102`}
+              className={`${radialYPositions[index]} to-[var(--secondary-color)] from-[var(--main-two-color)]/50 border border-gray-200 text-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-101`}
             >
               <h3 className="text-2xl font-bold text-center mb-4">
                 {tariff.name}
               </h3>
-              <p className="text-3xl font-semibold text-center mb-4">
-                <span className="text-yellow-400">{tariff.price}</span>
-              </p>
+              <div className="font-semibold text-center mb-4 ml-4 flex items-end justify-center space-x-1">
+                <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-l from-[var(--main-color)] to-[var(--main-two-color)] drop-shadow-sm ">
+                  {tariff.discountPrice}
+                </span>
+                <span className=" line-through text-gray-400">
+                  {tariff.price}
+                </span>
+              </div>
               <ul className="space-y-2 md:space-y-4 mb-6">
                 {tariff.features.map((feature, index) => (
                   <li
@@ -129,7 +136,7 @@ const PricingSection = () => {
                 to="questions"
                 smooth={true}
                 duration={500}
-                className="w-full bg-white text-[var(--main-two-color)] px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center space-x-2 cursor-pointer"
+                className="w-full bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>Обрати</span>
                 <ArrowRight className="w-5 h-5" />
@@ -137,6 +144,12 @@ const PricingSection = () => {
             </div>
           ))}
         </div>
+        <p className="text-center mt-8 custom-text uppercase">
+          До кінця знижки залишилося{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            48 год
+          </span>
+        </p>
       </div>
     </section>
   );

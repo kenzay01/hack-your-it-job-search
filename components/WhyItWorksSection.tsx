@@ -16,39 +16,48 @@ const WhyItWorksSection = () => {
       description:
         "Лишаємо лише теми, які реально питають на UA/EU-співбесідах – без академічної «води».",
       bgColor:
-        "bg-gradient-to-br from-[var(--main-color)]/60 to-[var(--main-two-color)] text-white",
-      textColor: "text-white",
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
     {
       icon: CheckCircle,
       title: "Лише реальні підходи",
       description:
         "Ми даємо лише реальні теми та підходи які працюють у мене та моїх студентів – я не буду вам наливати воду у форматі кар'єрних консультацій.",
-      bgColor: "bg-white text-[var(--secondary-color)]",
-      textColor: "text-[var(--secondary-color)]",
+      bgColor:
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
     {
       icon: Bolt,
       title: "14-денний жорсткий спринт",
       description:
         "Менше прокрастинації, більше дій, максимум результату у вигляді інформації.",
-      bgColor: "bg-white text-[var(--secondary-color)]",
-      textColor: "text-[var(--secondary-color)]",
+      bgColor:
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
     {
       icon: RefreshCw,
       title: "Метод «покажи → зроби → отримай фідбек»",
       description: "Спершу демо, далі ваша практика, потім детальний фідбек.",
-      bgColor: "bg-white text-[var(--secondary-color)]",
-      textColor: "text-[var(--secondary-color)]",
+      bgColor:
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
     {
       icon: Award,
       title: "Фокус на результат",
       description:
         "Моя задача довести тебе до жирного оферу, а не видати черговий диплом.",
-      bgColor: "bg-white text-[var(--secondary-color)]",
-      textColor: "text-[var(--secondary-color)]",
+      bgColor:
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
     {
       icon: DollarSign,
@@ -56,8 +65,9 @@ const WhyItWorksSection = () => {
       description:
         "Не створили або не покращили свою систему пошуку роботи – повернемо гроші протягом 7 днів, без зайвих запитань.",
       bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/30 text-white",
-      textColor: "text-white",
+        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      textColor:
+        "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
   ];
 
@@ -70,7 +80,7 @@ const WhyItWorksSection = () => {
           </h2>
           <p className="text-lg md:text-xl text-blue-100">
             Наш підхід –{" "}
-            <span className="text-[var(--main-two-color)]">
+            <span className="text-[#8447e9]">
               «20% зусиль → 80% результату»
             </span>
           </p>
@@ -83,14 +93,14 @@ const WhyItWorksSection = () => {
               className={`${feature.bgColor} p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 h-full group`}
             >
               <div className="text-4xl mb-4  group-hover:scale-105 transition-transform duration-300">
-                <feature.icon className={`${feature.textColor}`} size={48} />
+                <feature.icon className={`text-white`} size={48} />
               </div>
               <h3
                 className={`text-xl font-bold ${feature.textColor}  mb-3 group-hover:scale-102 transition-transform duration-300`}
               >
                 {feature.title}
               </h3>
-              <p className={`${feature.textColor} leading-relaxed`}>
+              <p className={`text-gray-300 leading-relaxed`}>
                 {feature.description}
               </p>
             </div>

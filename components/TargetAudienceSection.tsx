@@ -22,8 +22,7 @@ const TargetAudienceSection = () => {
         "Боїшся технічних співбесід: навіть знаючи відповідь, стресуєш або провалюєш їх",
         "Немає друзів, які можуть допомогти з працевлаштуванням, і ти думаєш, що роботу «роздають по блату»",
       ],
-      bgColor:
-        "bg-radial-[at_90%_90%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
+      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: Briefcase,
@@ -33,8 +32,7 @@ const TargetAudienceSection = () => {
         "Хочеш працювати на крутих проектах, але не розумієш які скіли потрібно для цього мати",
         "Важко зрозуміти, скільки ти реально коштуєш, і як правильно називати бажану зарплату на співбесіді",
       ],
-      bgColor:
-        "bg-radial-[at_90%_10%] to-[var(--secondary-color)] from-[var(--main-two-color)] to-70%",
+      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: Crown,
@@ -44,8 +42,7 @@ const TargetAudienceSection = () => {
         "Не розумієш як саме тобі перескочити на $4-5k+",
         "Потрібен план «20% теорії → 80% результату», а не 50-годинна енциклопедія",
       ],
-      bgColor:
-        "bg-gradient-to-bl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
+      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: Clock,
@@ -55,8 +52,7 @@ const TargetAudienceSection = () => {
         "Кар'єрні консультації не допомагають, а чекати «поки знайдеш роботу» не варіант",
         "Шукаєш чіткий план перевірений досвідом і часом, щоб закривати конкретні цілі щодня",
       ],
-      bgColor:
-        "bg-gradient-to-tl from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
+      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: Users,
@@ -71,17 +67,6 @@ const TargetAudienceSection = () => {
     },
   ];
 
-  const getMarginClass = (index: number) => {
-    const marginClasses = [
-      "md:ml-0",
-      "md:ml-8",
-      "md:ml-16",
-      "md:ml-24",
-      "md:ml-32",
-    ];
-    return marginClasses[index % marginClasses.length] || "md:ml-0";
-  };
-
   return (
     <section className="relative pt-8 sm:pt-12 md:pt-16 bg-[var(--secondary-color)] text-white">
       <div className="container mx-auto px-6">
@@ -93,14 +78,14 @@ const TargetAudienceSection = () => {
             </h2>
             <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto px-2">
               Перевір себе за цими 5 категоріями.{" "}
-              <span className="text-[var(--main-two-color)]">
+              <span className="text-[#8447e9]">
                 Якщо хоч 2 пункти про тебе – зустрінемось на марафоні
               </span>
             </p>
           </div>
 
           {/* Target Categories */}
-          <div className="space-y-4 md:space-y-8 mb-8 md:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {targetCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
@@ -108,34 +93,39 @@ const TargetAudienceSection = () => {
                   key={index}
                   className={`${
                     category.bgColor
-                  } rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300 
-                  md:w-242 ${getMarginClass(index)} md:hover:translate-x-2 
-                  border border-gray-200`}
+                  } rounded-2xl p-4 hover:shadow-lg transition-all duration-300 
+                   md:hover:translate-x-2 
+                  border border-gray-200 ${
+                    targetCategories.indexOf(category) ===
+                    targetCategories.length - 1
+                      ? "md:col-span-2"
+                      : ""
+                  }`}
                 >
-                  <div className="flex items-start space-x-4 md:space-x-6">
-                    <div
-                      className={`w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0`}
-                    >
-                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--main-two-color)]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
+                  <div className="flex flex-col items-start space-x-4 md:space-x-6">
+                    <div className="flex items-center justify-start w-full gap-4">
+                      <div
+                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0`}
+                      >
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--main-two-color)]" />
+                      </div>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">
                         {index + 1}. {category.title}
                       </h3>
-                      <ul className="space-y-2 md:space-y-0">
-                        {category.problems.map((problem, problemIndex) => (
-                          <li
-                            key={problemIndex}
-                            className="flex items-start space-x-2 md:space-x-3"
-                          >
-                            <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-2 md:mt-3 flex-shrink-0"></div>
-                            <p className="text-sm sm:text-base text-gray-300 pt-1 md:pt-3">
-                              {problem}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
+                    <ul className="flex flex-col">
+                      {category.problems.map((problem, problemIndex) => (
+                        <li
+                          key={problemIndex}
+                          className="flex items-start space-x-1 md:space-x-2"
+                        >
+                          <div className="w-2 h-2 bg-[var(--main-two-color)] rounded-full mt-2 flex-shrink-0 self-center"></div>
+                          <p className="text-sm sm:text-base text-gray-300 pt-1 md:pt-2">
+                            {problem}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               );
@@ -143,13 +133,16 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-gradient-to-tl from-[var(--main-color)]/60 via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101">
+          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                Якщо хоч 2 пункти про вас
+                Якщо хоч{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                  2 пункти про вас
+                </span>
               </h3>
               <ArrowDown className="w-6 h-6 mx-auto mb-2" />
-              <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8 md:px-2">
+              <p className="text-lg sm:text-xl text-white mb-6 md:mb-8 md:px-2">
                 зустрінемось на марафоні й закриємо ваші потреби за 14 днів
               </p>
 
@@ -158,11 +151,11 @@ const TargetAudienceSection = () => {
                   to="questions"
                   smooth={true}
                   duration={500}
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                  className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto cursor-pointer"
                 >
                   Приєднатися до марафону
                 </ScrollLink>
-                <div className="flex items-center space-x-2 text-blue-100 text-sm sm:text-base">
+                <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
                   <CheckCircle className="w-5 h-5" />
                   <span>Гарантія результату</span>
                 </div>

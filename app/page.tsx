@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden md:overflow-x-auto">
+    <div className="min-h-screen overflow-x-hidden md:overflow-x-auto">
       <Header />
       <HeroSection />
       <MainOfferSection />
@@ -22,11 +22,11 @@ export default function Home() {
       <AuthorSection />
       <WhyItWorksSection />
       <JobSearchMarathonSection />
+      <PricingSection />
       <CasesSlider />
       <QuestionsSection />
-      <GuaranteesSection />
+      {/* <GuaranteesSection /> */}
       <StartSection />
-      <PricingSection />
       <Footer />
     </div>
   );

@@ -16,24 +16,44 @@ const MainOfferSection = () => {
   const targetGroups = [
     {
       icon: offerImg2,
-      title: "Ти Junior",
+      title: (
+        <>
+          Ти{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            Junior
+          </span>
+        </>
+      ),
       description: "і тебе лякає сам факт проходження технічних співбесід?",
-      color:
-        "bg-gradient-to-br from-[var(--main-two-color)] to-[var(--main-color)]",
+      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: offerImg1,
-      title: "Ти Middle",
+      title: (
+        <>
+          Ти{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            Middle
+          </span>
+        </>
+      ),
       description: "який вже має досвід але застряг на маленькій ЗП?",
-      color: "bg-radial to-[var(--secondary-color)] from-gray-500/30",
+      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
     },
     {
       icon: offerImg3,
-      title: "Ти досвідчений Senior",
+      title: (
+        <>
+          Ти{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            досвідчений Senior
+          </span>
+        </>
+      ),
       description:
         "і хочеш витиснути з ринку ще +$1-2k, але не знаєш як шукати жирні офери?",
-      color: "bg-white",
-      colorText: "text-[var(--secondary-color)]",
+      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      // colorText: "text-[var(--secondary-color)]",
     },
   ];
 
@@ -51,7 +71,10 @@ const MainOfferSection = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Думаєш що Український IT-ринок{" "}
-              <span className="text-[var(--main-two-color)]">помер</span>?
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                помер
+              </span>
+              ?
             </h2>
           </div>
 
@@ -68,22 +91,14 @@ const MainOfferSection = () => {
                   >
                     <Image
                       src={IconComponent}
-                      alt={group.title}
+                      alt={"icons"}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3
-                    className={`text-xl font-bold ${
-                      group.colorText ? group.colorText : "text-white"
-                    }  mb-2 mt-22`}
-                  >
+                  <h3 className={`text-xl font-bold text-white mb-2 mt-22`}>
                     {group.title}
                   </h3>
-                  <p
-                    className={`${
-                      group.colorText ? group.colorText : "text-white"
-                    } leading-relaxed`}
-                  >
+                  <p className={`text-white leading-relaxed`}>
                     {group.description}
                   </p>
                 </div>
@@ -91,14 +106,18 @@ const MainOfferSection = () => {
             })}
           </div>
 
-          <div className="bg-gradient-to-br from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl py-6 px-4 md:p-12 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
+          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl py-6 px-4 md:p-12 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
             <div className="text-center mb-4 md:mb-8">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 За 14 днів ти побудуєш власну систему, яка приводить до першого
                 офера
               </h3>
               <p className="text-lg md:text-xl text-blue-100">
-                або дає +$6000 на рік до нинішньої зарплати
+                або дає{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                  +$6000
+                </span>{" "}
+                на рік до нинішньої зарплати
               </p>
             </div>
             <div className="space-y-4 mb-8">
@@ -107,14 +126,14 @@ const MainOfferSection = () => {
                   key={index}
                   className="flex items-center space-x-4 justify-start"
                 >
-                  <div className="md:w-8 md:h-8 w-6 h-6  rounded-full flex items-center justify-center flex-shrink-0 drop-shadow-[0px_0px_4px_white]">
+                  <div className="md:w-8 md:h-8 w-6 h-6  rounded-full flex items-center justify-center flex-shrink-0 drop-shadow-[0px_0px_2px_white]">
                     <Image
                       src={checkImg}
                       alt="Check"
                       className="w-full h-full text-gray-900"
                     />
                   </div>
-                  <p className="md:text-md text-sm text-blue-100 md:leading-relaxed">
+                  <p className="md:text-md text-sm text-white md:leading-relaxed">
                     {result}
                   </p>
                 </div>
@@ -122,10 +141,13 @@ const MainOfferSection = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-tr from-[var(--main-color)] via-[var(--main-two-color)] to-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
+          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Результат: Одна чітка система
+                Результат:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                  Одна чітка система
+                </span>
               </h3>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -163,7 +185,7 @@ const MainOfferSection = () => {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-bold  hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto">
+              <button className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto">
                 <span>Почати за 14 днів</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
