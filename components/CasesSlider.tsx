@@ -186,10 +186,7 @@ const CasesSlider = () => {
 
   return (
     <>
-      <section
-        id="cases"
-        className="py-8 md:py-16 bg-[var(--secondary-color)] min-h-screen"
-      >
+      <section id="cases" className="py-8 md:py-16 bg-transparent min-h-screen">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">

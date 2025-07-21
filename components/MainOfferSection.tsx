@@ -64,7 +64,7 @@ const MainOfferSection = () => {
   ];
 
   return (
-    <section className="py-6 md:py-24 bg-[var(--secondary-color)] z-100">
+    <section className="py-6 md:py-24 bg-transparent z-100">
       <div className="container mx-auto px-2">
         <div className="max-w-6xl mx-auto">
           {/* <div className="text-center mb-12">

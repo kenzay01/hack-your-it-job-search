@@ -70,7 +70,7 @@ const TargetAudienceSection = () => {
 
   return (
     <section
-      className="relative pt-8 sm:pt-12 md:pt-16 bg-[var(--secondary-color)] text-white"
+      className="relative pt-8 sm:pt-12 md:pt-16 bg-transparent text-white"
       id="who"
     >
       <div className="container mx-auto px-6">

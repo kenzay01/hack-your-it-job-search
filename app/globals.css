@@ -27,6 +27,16 @@ p {
   font-family: var(--font-roboto);
 }
 
+body {
+  background: radial-gradient(
+    circle at center,
+    #373737 1px,
+    var(--secondary-color) 1px
+  );
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
 * button {
   @apply cursor-pointer;
 }

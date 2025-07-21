@@ -124,7 +124,7 @@ const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="py-8 md:py-12 bg-[var(--secondary-color)] text-white relative"
+      className="py-8 md:py-12 bg-transparent text-white relative"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-12 text-white tracking-wide">

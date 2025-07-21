@@ -42,7 +42,7 @@ const MarathonPromoBlock = () => {
   };
 
   return (
-    <div className="bg-[var(--secondary-color)] border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+    <div className="bg-transparent border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
         <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
           {/* Таймер */}

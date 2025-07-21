@@ -19,7 +19,7 @@ const GuaranteesSection = () => {
   return (
     <section
       id="guarantees"
-      className="py-16 pb-4 bg-[var(--secondary-color)] text-white relative"
+      className="py-16 pb-4 bg-transparent text-white relative"
     >
       <div>
         <h2 className="text-4xl font-bold text-white mb-8 text-center">

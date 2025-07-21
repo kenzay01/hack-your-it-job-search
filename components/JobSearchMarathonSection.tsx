@@ -265,7 +265,7 @@ const JobSearchMarathonSection = () => {
   return (
     <section
       id="program"
-      className="py-8 max-w-6xl mx-auto sm:py-12 md:py-24 bg-[var(--secondary-color)] text-white relative"
+      className="py-8 max-w-6xl mx-auto sm:py-12 md:py-24 bg-transparent text-white relative"
     >
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
