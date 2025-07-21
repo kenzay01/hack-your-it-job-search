@@ -61,7 +61,7 @@ const HeroSection = () => {
         {/* Desktop content */}
         <div className="hidden md:block px-4 mr-72 relative z-30">
           <div className="max-w-4xl mx-auto text-start">
-            <div className="flex flex-row items-start space-y-1 space-x-1">
+            <div className="flex flex-row items-start space-y-1 space-x-1 mb-2">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
                 <Star className="w-4 h-4 text-[#8447e9] fill-current" />
                 <span className="text-sm font-medium">

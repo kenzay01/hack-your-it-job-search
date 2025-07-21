@@ -66,7 +66,7 @@ const MainOfferSection = () => {
     <section className="py-6 md:py-24 bg-[var(--secondary-color)] z-100">
       <div className="container mx-auto px-2">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Думаєш що Український IT-ринок{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
@@ -74,7 +74,7 @@ const MainOfferSection = () => {
               </span>
               ?
             </h2>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-3 gap-10 md:gap-6 mb-12 px-4 md:p-0">
             {targetGroups.map((group, index) => {
@@ -188,7 +188,7 @@ const MainOfferSection = () => {
                   to="questions"
                   smooth={true}
                   duration={500}
-                  className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto"
+                  className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto"
                 >
                   <span>Доєднатись до марафону</span>
                 </ScrollLink>

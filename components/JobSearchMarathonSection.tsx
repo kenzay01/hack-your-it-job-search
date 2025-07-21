@@ -6,10 +6,11 @@ import {
   Briefcase,
   DollarSign,
   Star,
-  Target,
+  Check,
   Search,
   MessageSquare,
   CheckSquare,
+  Target,
 } from "lucide-react";
 
 const JobSearchMarathonSection = () => {
@@ -199,19 +200,19 @@ const JobSearchMarathonSection = () => {
             <div
               className={`mb-3 flex items-center py-2 px-3 rounded-lg transition-all duration-300 group shadow-sm min-h-[25px] ${
                 topLevelWithoutSubItems
-                  ? "bg-white/10 hover:bg-white/15 border-2 border-white/50 hover:border-white/70 ring-1 ring-white/20"
-                  : "bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/30"
+                  ? "bg-white/10 hover:bg-white/10 border-2 border-white/50 hover:border-white/70 ring-1 ring-white/20"
+                  : "bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/30"
               }`}
             >
-              <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0 rounded-lg bg-white/20 group-hover:bg-white/25 transition-colors">
-                <Target className="w-3 h-3 text-white/80" />
+              <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0 rounded-full bg-white/20 group-hover:bg-white/25 transition-colors">
+                <Check className="w-4 h-4 text-white/80 rounded-full" />
               </div>
               <span className="text-white text-sm sm:text-base leading-relaxed group-hover:text-white/95 transition-colors font-semibold">
                 {item.main}
               </span>
             </div>
             {item.subItems && (
-              <div className="space-y-2">
+              <div className="space-y-2 ml-4">
                 {renderItems(item.subItems, false)}
               </div>
             )}
@@ -223,12 +224,12 @@ const JobSearchMarathonSection = () => {
             key={index}
             className={`flex items-center transition-all duration-300 mb-3 last:mb-0 min-h-[25px] ${
               isTopLevel
-                ? "py-2 px-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/30 shadow-sm group"
-                : "py-1 px-3"
+                ? "py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/30 shadow-sm group"
+                : "py-1 px-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/30 shadow-sm group"
             }`}
           >
-            <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0 rounded-lg bg-white/20 group-hover:bg-white/25 transition-colors">
-              <Target className="w-3 h-3 text-white/80" />
+            <div className="flex items-center justify-center w-6 h-6 mr-3 rounded-full flex-shrink-0 bg-white/20 group-hover:bg-white/25 transition-colors">
+              <Check className="w-4 h-4 text-white/80 " />
             </div>
             <span
               className={`${

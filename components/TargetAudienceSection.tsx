@@ -146,7 +146,7 @@ const TargetAudienceSection = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                   хоча б
                 </span>{" "}
-                2 пункти про вас – зустрінемось на марафоні й закриємо ваші
+                2 пункти про тебе – зустрінемось на марафоні й закриємо ваші
                 потреби за 14 днів.
               </h3>
 

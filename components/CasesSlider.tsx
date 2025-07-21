@@ -231,9 +231,10 @@ const CasesSlider = () => {
                   src={currentCase.image}
                   alt={currentCase.name}
                   fill
-                  quality={60}
+                  quality={75}
                   loading="lazy"
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="p-4 bg-gradient-to-bl from-[var(--main-color)] via-[var(--main-two-color)] via-20% to-[var(--secondary-color)] text-white">
@@ -296,7 +297,7 @@ const CasesSlider = () => {
                   alt={currentCase.name}
                   width={400}
                   height={500}
-                  quality={60}
+                  quality={75}
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="w-full h-full object-cover"
