@@ -231,7 +231,11 @@ const JobSearchMarathonSection = () => {
             }`}
           >
             <div className="flex items-center justify-center w-6 h-6 mr-2 rounded-full flex-shrink-0 bg-white/20 group-hover:bg-white/25 transition-colors">
-              <Check className="w-4 h-4 text-white/80 " />
+              {isTopLevel ? (
+                <Target className="w-4 h-4 text-white/80 " />
+              ) : (
+                <Check className="w-4 h-4 text-white/80 " />
+              )}
             </div>
             <span
               className={`${
