@@ -92,6 +92,9 @@ const MainOfferSection = () => {
                       src={IconComponent}
                       alt={"icons"}
                       className="w-full h-full object-cover"
+                      quality={75}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
                   <h3 className={`text-xl font-bold text-white mb-2 mt-22`}>

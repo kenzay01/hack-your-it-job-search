@@ -78,7 +78,7 @@ const MarathonPromoBlock = () => {
             </div>
           </div>
 
-          <div className="h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
 
           {/* Спеціальні умови */}
           <div className="text-center lg:text-left">
@@ -112,7 +112,7 @@ const MarathonPromoBlock = () => {
             </div>
           </div>
 
-          <div className="h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
 
           {/* Старт потоку */}
           <div className="text-center lg:text-left">
@@ -129,7 +129,7 @@ const MarathonPromoBlock = () => {
             </div>
           </div>
 
-          <div className="h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
 
           {/* Тривалість */}
           <div className="text-center lg:text-left">

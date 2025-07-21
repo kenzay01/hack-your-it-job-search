@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Send, ArrowRight } from "lucide-react";
 import { HiOutlineCursorClick } from "react-icons/hi";
+import { CornerRightDown } from "lucide-react";
 
 const QuestionsSection = () => {
   const [formData, setFormData] = useState({
@@ -258,7 +259,7 @@ Telegram: ${data.telegram}
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-white">
+              <label className="block text-md font-medium text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                 Наскільки тобі цікавий марафон по пошуку роботи?
               </label>
               <div className="mt-2 pl-2 flex flex-col gap-2">

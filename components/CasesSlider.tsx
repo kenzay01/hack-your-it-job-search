@@ -231,7 +231,9 @@ const CasesSlider = () => {
                   fill
                   quality={75}
                   loading="lazy"
-                  className="object-cover"
+                  className={`object-cover ${
+                    currentSlide === 3 || currentSlide === 6 ? "object-top" : ""
+                  }`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>

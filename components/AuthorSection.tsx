@@ -112,7 +112,7 @@ const AuthorSection = () => {
                           className="text-[var(--main-two-color)]"
                         />
                       </div>
-                      <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+                      <p className="text-gray-200 text-sm sm:text-base leading-relaxed text-start">
                         {item.text}
                       </p>
                     </div>

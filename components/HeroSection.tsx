@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section className="relative bg-transparent text-white z-0">
       {/* Desktop layout - без змін */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         {/* <Image
           src={logo1}
           alt="Logo 1"
@@ -39,11 +39,11 @@ const HeroSection = () => {
       </div>
 
       {/* Mobile layout - hero image як background */}
-      <div className="md:hidden absolute -right-30 top-20 z-0 overflow-hidden">
+      <div className="lg:hidden absolute -right-30 top-20 z-0 overflow-hidden">
         <Image
           src={heroImgPng}
           alt="Hero Image"
-          className="object-cover w-200 h-auto opacity-40 drop-shadow-[0px_20px_75px_rgb(107,14,232,0.9)] max-w-[500px] max-h-[550px]"
+          className="object-cover w-200 h-auto opacity-80 drop-shadow-[0px_20px_75px_rgb(107,14,232,0.9)] max-w-[500px] max-h-[550px]"
           quality={85}
           width={400}
           height={400}
@@ -122,7 +122,7 @@ const HeroSection = () => {
         </div>
 
         {/* Mobile content - розміщений поверх background image */}
-        <div className="md:hidden px-4 relative z-40 min-h-screen flex flex-col justify-end pb-12">
+        <div className="md:hidden px-4 relative z-40 pt-74 flex flex-col justify-end pb-12">
           <div className="max-w-sm mx-auto text-center">
             <div className="flex flex-col items-center space-y-1 mb-2">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
@@ -159,7 +159,7 @@ const HeroSection = () => {
                 Дмитром Пучковим
               </span>
             </p>
-            <p className="text-white mb-4 custom-text text-sm">
+            <p className="text-white mb-2 custom-text text-sm">
               За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
               <span className="underline decoration-[var(--secondary-color)]">
                 з $0 до $5 000+.
