@@ -9,6 +9,7 @@ import offerImg3 from "@/public/offers/sticker-1.png";
 // import checkImg2 from "@/public/check.png";
 import checkImg from "@/public/check.webp";
 import { Link as ScrollLink } from "react-scroll";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const MainOfferSection = () => {
   const targetGroups = [
@@ -191,6 +192,7 @@ const MainOfferSection = () => {
                   className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto"
                 >
                   <span>Доєднатись до марафону</span>
+                  <HiOutlineCursorClick className="w-8 h-8" />
                 </ScrollLink>
               </div>
             </div>

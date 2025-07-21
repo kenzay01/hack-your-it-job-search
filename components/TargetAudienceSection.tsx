@@ -11,6 +11,7 @@ import {
   ArrowDown,
 } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const TargetAudienceSection = () => {
   const targetCategories = [
@@ -155,9 +156,10 @@ const TargetAudienceSection = () => {
                   to="questions"
                   smooth={true}
                   duration={500}
-                  className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto cursor-pointer"
+                  className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto"
                 >
-                  Забронювати місце
+                  <span>Забронювати місце</span>
+                  <HiOutlineCursorClick className="w-8 h-8" />
                 </ScrollLink>
                 {/* <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
                   <CheckCircle className="w-5 h-5" />

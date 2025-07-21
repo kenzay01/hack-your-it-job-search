@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Send, ArrowRight } from "lucide-react";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const QuestionsSection = () => {
   const [formData, setFormData] = useState({
@@ -174,7 +175,9 @@ Telegram: ${data.telegram}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold mb-2">Залишилися запитання?</h2>
+          <h2 className="text-4xl font-bold mb-2 uppercase">
+            Залишилися запитання?
+          </h2>
           <p className="text-lg md:text-xl text-white mb-4">
             Залиш свої контакти і наша команда зв`яжеться з тобою
           </p>
@@ -294,8 +297,8 @@ Telegram: ${data.telegram}
               type="submit"
               className="w-full bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 hover:-translate-y-0.5"
             >
-              <span>Відправити</span>
-              <ArrowRight className="w-5 h-5" />
+              <span>Залишити заявку</span>
+              <HiOutlineCursorClick className="w-8 h-8" />
             </button>
             {submitStatus && (
               <p

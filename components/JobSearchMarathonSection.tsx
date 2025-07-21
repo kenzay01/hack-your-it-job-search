@@ -271,7 +271,7 @@ const JobSearchMarathonSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight uppercase">
               14-денна програма марафону:
             </h2>
           </div>

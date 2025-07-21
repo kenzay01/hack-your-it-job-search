@@ -3,6 +3,7 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { ArrowRight, Check } from "lucide-react";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const PricingSection = () => {
   const tariffs = [
@@ -49,7 +50,7 @@ const PricingSection = () => {
           label: "Загальна для Basic, Pro та Vip",
         },
         {
-          text: "1 live практикум – Soft skills + HR інтерв’ю (Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.)",
+          text: "1 live практикум – Soft skills + HR інтерв’ю. Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.",
           included: true,
           label: "Загальний для Pro та Vip",
         },
@@ -86,7 +87,7 @@ const PricingSection = () => {
           label: "Загальна для Basic, Pro та Vip",
         },
         {
-          text: "1 live практикум – Soft skills + HR інтерв’ю (Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.)",
+          text: "1 live практикум – Soft skills + HR інтерв’ю. Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.",
           included: true,
           label: "Загальний для Pro та Vip",
         },
@@ -135,7 +136,7 @@ const PricingSection = () => {
               key={tariff.name}
               className={`${radialYPositions[index]} to-[var(--secondary-color)] from-[var(--main-two-color)]/50 border border-gray-200 text-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-101`}
             >
-              <h3 className="text-2xl font-bold text-center mb-4">
+              <h3 className="text-2xl font-bold text-center mb-4 uppercase">
                 {tariff.name}
               </h3>
               <div className="font-semibold text-center mb-4 ml-4 flex items-end justify-center space-x-1">
@@ -147,21 +148,24 @@ const PricingSection = () => {
                 </span>
               </div>
               <ul className="space-y-2 md:space-y-4 mb-6">
-                {tariff.features.map((feature, index) => (
-                  <li key={index} className="flex flex-col space-y-1">
+                {tariff.features.map((feature, idx) => (
+                  <li key={idx} className="flex flex-col space-y-1">
                     <div className={`${feature.label && ""}`}>
                       {feature.label && (
-                        <span className="text-gray-400 block mb-1 pl-4">
+                        <span className="text-[#9b7ad2] block mb-1 uppercase ml-1">
                           {feature.label}
                         </span>
                       )}
-                      <div className="flex items-center space-x-2 p-1 rounded-xl">
+                      <div className="flex items-center space-x-4 p-1 rounded-xl">
                         <span className="bg-[var(--main-two-color)] p-1 rounded-full">
                           <Check className="w-4 h-4 text-white" />
                         </span>
                         <span>{feature.text}</span>
                       </div>
                     </div>
+                    {idx < tariff.features.length - 1 && (
+                      <div className="border-t border-gray-200/30 my-1 mx-2 rounded-full"></div>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -172,7 +176,8 @@ const PricingSection = () => {
                 className="w-full bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <span>{tariff.btn}</span>
-                <ArrowRight className="w-5 h-5" />
+                <HiOutlineCursorClick className="w-6 h-6" />
+                {/* <ArrowRight className="w-5 h-5" /> */}
               </ScrollLink>
             </div>
           ))}

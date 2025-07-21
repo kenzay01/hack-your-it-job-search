@@ -15,6 +15,7 @@ import case8 from "@/public/cases/case8.jpg";
 import case9 from "@/public/cases/case9.jpg";
 import case10 from "@/public/cases/case10.jpg";
 import case11 from "@/public/cases/case11.jpg";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const CasesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -192,7 +193,7 @@ const CasesSlider = () => {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-5xl font-bold text-white">Кейси</h1>
+            <h1 className="text-5xl font-bold text-white uppercase">Кейси</h1>
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
@@ -253,9 +254,10 @@ const CasesSlider = () => {
                 </div>
                 <button
                   onClick={openModal}
-                  className="bg-[var(--main-two-color)] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors w-full"
+                  className="bg-[var(--main-two-color)] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors w-full flex items-center justify-center gap-2"
                 >
                   Детальніше
+                  <HiOutlineCursorClick className="w-6 h-6" />
                 </button>
               </div>
             </div>
@@ -330,9 +332,10 @@ const CasesSlider = () => {
                 </div>
                 <button
                   onClick={openModal}
-                  className="bg-[var(--main-two-color)] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors self-start"
+                  className="bg-[var(--main-two-color)] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[var(--main-two-color)]/80 transition-colors self-start flex items-center justify-center gap-2"
                 >
                   Детальніше
+                  <HiOutlineCursorClick className="w-6 h-6" />
                 </button>
               </div>
             </div>
