@@ -23,27 +23,37 @@ const TargetAudienceSection = () => {
         "Боїшся технічних співбесід: навіть знаючи відповідь, стресуєш або провалюєш їх",
         "Немає друзів, які можуть допомогти з працевлаштуванням, і ти думаєш, що роботу «роздають по блату»",
       ],
-      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      bgColor: "bg-[var(--secondary-color)]",
     },
     {
       icon: Briefcase,
-      title: "Уже Middle, але застряг на $800 - 1 500 і хочете стрибок ×2-×3",
+      title: (
+        <>
+          Уже Middle, але застряг на{" "}
+          <strong className="font-extrabold">$800</strong> -{" "}
+          <strong className="font-extrabold">$1500</strong> і хочете стрибок
+          ×2-×3
+        </>
+      ),
       problems: [
         "3+ роки програмуєш, а заробляєш, як Junior",
         "Хочеш працювати на крутих проектах, але не розумієш які скіли потрібно для цього мати",
         "Важко зрозуміти, скільки ти реально коштуєш, і як правильно називати бажану зарплату на співбесіді",
       ],
-      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      bgColor: "bg-[var(--secondary-color)]",
     },
     {
       icon: Crown,
       title: "Хочеш залетіти на Senior і заробляти в 3-му квартилі",
       problems: [
         "Класно знаєш технічну базу, але не маєш класних оферів",
-        "Не розумієш як саме тобі перескочити на $4-5k+",
+        <>
+          Не розумієш як саме тобі перескочити на{" "}
+          <strong className="font-extrabold">$4-5k+</strong>
+        </>,
         "Потрібен план «20% теорії → 80% результату», а не 50-годинна енциклопедія",
       ],
-      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      bgColor: "bg-[var(--secondary-color)]",
     },
     {
       icon: Clock,
@@ -53,7 +63,7 @@ const TargetAudienceSection = () => {
         "Кар'єрні консультації не допомагають, а чекати «поки знайдеш роботу» не варіант",
         "Шукаєш чіткий план перевірений досвідом і часом, щоб закривати конкретні цілі щодня",
       ],
-      bgColor: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      bgColor: "bg-[var(--secondary-color)]",
     },
     {
       icon: Users,
@@ -140,7 +150,7 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
+          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">
                 Якщо{" "}

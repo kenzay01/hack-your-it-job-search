@@ -15,8 +15,7 @@ const WhyItWorksSection = () => {
       title: "20% зусиль → 80% результату",
       description:
         "Лишаємо лише теми, які реально питають на UA/EU-співбесідах – без академічної «води».",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
@@ -25,8 +24,7 @@ const WhyItWorksSection = () => {
       title: "Лише реальні підходи",
       description:
         "Ми даємо лише реальні теми та підходи які працюють у мене та моїх студентів – я не буду вам наливати воду у форматі кар'єрних консультацій.",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
@@ -35,8 +33,7 @@ const WhyItWorksSection = () => {
       title: "14-денний жорсткий спринт",
       description:
         "Менше прокрастинації, більше дій, максимум результату у вигляді інформації.",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
@@ -44,8 +41,7 @@ const WhyItWorksSection = () => {
       icon: RefreshCw,
       title: "Метод «покажи → зроби → отримай фідбек»",
       description: "Спершу демо, далі ваша практика, потім детальний фідбек.",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
@@ -54,8 +50,7 @@ const WhyItWorksSection = () => {
       title: "Фокус на результат",
       description:
         "Моя задача довести тебе до жирного оферу, а не видати черговий диплом.",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },
@@ -64,8 +59,7 @@ const WhyItWorksSection = () => {
       title: "Гарантія без ризику",
       description:
         "Не створили або не покращили свою систему пошуку роботи – повернемо гроші протягом 7 днів, без зайвих запитань.",
-      bgColor:
-        "bg-radial to-[var(--secondary-color)] from-gray-500/20 text-white",
+      bgColor: "bg-[var(--secondary-color)] text-white",
       textColor:
         "text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]",
     },

@@ -24,7 +24,7 @@ const MainOfferSection = () => {
         </>
       ),
       description: "і тебе лякає сам факт проходження технічних співбесід?",
-      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      color: "bg-[var(--secondary-color)]",
     },
     {
       icon: offerImg1,
@@ -37,7 +37,7 @@ const MainOfferSection = () => {
         </>
       ),
       description: "який вже має досвід але застряг на маленькій ЗП?",
-      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      color: "bg-[var(--secondary-color)]",
     },
     {
       icon: offerImg3,
@@ -51,7 +51,7 @@ const MainOfferSection = () => {
       ),
       description:
         "і хочеш витиснути з ринку ще +$1-2k, але не знаєш як шукати жирні офери?",
-      color: "bg-radial to-[var(--secondary-color)] from-gray-500/20",
+      color: "bg-[var(--secondary-color)]",
       // colorText: "text-[var(--secondary-color)]",
     },
   ];
@@ -108,7 +108,7 @@ const MainOfferSection = () => {
             })}
           </div>
 
-          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl py-6 px-4 md:p-6 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
+          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl py-6 px-4 md:p-6 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
             <div className="text-center mb-4 md:mb-8">
               <h3 className="text-xl md:text-2xl font-bold mb-2">
                 За 14 днів ти побудуєш власну систему, яка приводить до першого
@@ -116,7 +116,7 @@ const MainOfferSection = () => {
               </h3>
               <p className="md:text-lg text-white">
                 або дає{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)] font-extrabold">
                   +$6000
                 </span>{" "}
                 на рік до нинішньої зарплати
@@ -143,7 +143,7 @@ const MainOfferSection = () => {
             </div>
           </div>
 
-          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
+          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
             <div className="text-center mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Результат:{" "}

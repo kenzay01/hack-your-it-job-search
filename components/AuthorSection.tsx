@@ -64,7 +64,7 @@ const AuthorSection = () => {
     <section className="py-12 bg-transparent relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Єдиний Glassmorphism блок */}
-        <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl hover:bg-white/15 transition-all duration-300">
+        <div className="backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl p-6 shadow-2xl transition-all duration-300">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8">
             {/* Ліва частина - фото */}
             <div id="author" className="flex justify-center items-center">

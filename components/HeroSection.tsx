@@ -104,7 +104,8 @@ const HeroSection = () => {
               <p className="text-white mb-6">
                 За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-two-color)] to-[var(--main-color)]">
-                  з $0 до $5 000+.
+                  з <strong className="font-extrabold">$0</strong> до{" "}
+                  <strong className="font-extrabold">$5 000+</strong>.
                 </span>
               </p>
 

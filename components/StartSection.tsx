@@ -42,7 +42,7 @@ const MarathonPromoBlock = () => {
   };
 
   return (
-    <div className="bg-transparent border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+    <div className="bg-[var(--secondary-color)] border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
         <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
           {/* Таймер */}
@@ -93,7 +93,7 @@ const MarathonPromoBlock = () => {
                     Знижка на кожен тариф:
                   </span>
                 </div>
-                <div className="font-bold text-[#8447e9] text-sm custom-text text-center">
+                <div className=" text-[#8447e9] text-sm custom-text text-center font-extrabold">
                   -20$ / -25$ / -30$
                 </div>
                 <p className="text-sm text-gray-300 mt-2">
@@ -104,8 +104,8 @@ const MarathonPromoBlock = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <span className="text-lg">🎁</span>
                   <div className="font-bold text-white text-sm custom-text">
-                    <span className="text-[#8447e9]">‑15%</span> на наступний
-                    продукт
+                    <span className="text-[#8447e9] font-extrabold">‑15%</span>{" "}
+                    на наступний продукт
                   </div>
                 </div>
               </div>

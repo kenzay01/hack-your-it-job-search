@@ -134,7 +134,7 @@ const PricingSection = () => {
           {tariffs.map((tariff, index) => (
             <div
               key={tariff.name}
-              className={`${radialYPositions[index]} to-[var(--secondary-color)] from-[var(--main-two-color)]/50 border border-gray-200 text-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-101`}
+              className={`${radialYPositions[index]} to-[var(--secondary-color)] from-[#290853] border border-gray-200 text-white rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-101`}
             >
               <h3 className="text-2xl font-bold text-center mb-4 uppercase">
                 {tariff.name}
