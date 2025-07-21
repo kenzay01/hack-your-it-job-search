@@ -71,13 +71,13 @@ const HeroSection = () => {
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
                 <Star className="w-4 h-4 text-[#8447e9] fill-current" />
                 <span className="text-sm font-medium">
-                  Кожен 2‑й збільшив дохід у 1.5 рази
+                  2 роки досвіду викладання
                 </span>
               </div>
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
                 <Star className="w-4 h-4 text-[#8447e9] fill-current" />
                 <span className="text-sm font-medium">
-                  5 особистих оферів за цей рік
+                  5 особистих оферів на $5k+ з початку 2025 року
                 </span>
               </div>
             </div>
@@ -134,13 +134,13 @@ const HeroSection = () => {
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
                 <Star className="w-4 h-4 text-[#8447e9] fill-current" />
                 <span className="text-[11px] font-medium">
-                  Кожен 2‑й збільшив дохід у 1.5 рази
+                  2 роки досвіду викладання
                 </span>
               </div>
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
                 <Star className="w-4 h-4 text-[#8447e9] fill-current" />
                 <span className="text-[11px] font-medium">
-                  5 особистих оферів за цей рік
+                  5 особистих оферів на $5k+ з початку 2025 року
                 </span>
               </div>
             </div>
