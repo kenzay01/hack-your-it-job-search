@@ -192,7 +192,7 @@ Telegram: ${data.telegram}
             <span>Або одразу пиши в підтримку Telegram</span>
           </a>
         </div>
-        <div className="max-w-4xl mx-auto bg-radial to-[var(--secondary-color)] from-gray-500/10 rounded-2xl p-6 border-2 border-gray-200 relative z-10">
+        <div className="max-w-4xl mx-auto bg-[var(--secondary-color)] rounded-2xl p-6 border-2 border-gray-200 relative z-10">
           <h1 className="uppercase text-2xl md:text-3xl font-semibold mb-4">
             Залишіть заявку
           </h1>
