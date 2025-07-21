@@ -223,7 +223,7 @@ const CasesSlider = () => {
                 <ChevronRight className="w-6 h-6 text-gray-700" />
               </button>
             </div>
-            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl border border-gray-200 mb-4">
+            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-200 mb-4">
               <div className="relative w-full h-64">
                 <Image
                   src={currentCase.image}
@@ -290,7 +290,7 @@ const CasesSlider = () => {
 
           {/* Desktop Layout */}
           <div className="hidden md:block">
-            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl h-[500px] flex border border-gray-200">
+            <div className="bg-transparent rounded-2xl overflow-hidden shadow-2xl h-[500px] flex border-2 border-gray-200">
               {/* Left side - Photo */}
               <div className="w-1/3 relative">
                 <Image

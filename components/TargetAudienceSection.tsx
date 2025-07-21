@@ -109,7 +109,7 @@ const TargetAudienceSection = () => {
                     category.bgColor
                   } rounded-2xl p-4 hover:shadow-lg transition-all duration-300 
                    md:hover:translate-x-2 
-                  border border-gray-200 ${
+                  border-2 border-gray-200 ${
                     targetCategories.indexOf(category) ===
                     targetCategories.length - 1
                       ? "md:col-span-2"
@@ -150,15 +150,18 @@ const TargetAudienceSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
+          <div className="bg-[var(--secondary-color)] border-2 border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">
-                Якщо{" "}
+                Якщо хоча б{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-                  хоча б
+                  2 пункти
                 </span>{" "}
-                2 пункти про тебе – зустрінемось на марафоні й закриємо ваші
-                потреби за 14 днів.
+                про тебе – зустрінемось на марафоні й закриємо ваші потреби за{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                  14 днів
+                </span>
+                .
               </h3>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

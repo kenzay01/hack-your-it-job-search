@@ -68,7 +68,7 @@ const FaqSection = () => {
           </h2>
         </div>
 
-        <div className="">
+        <div className="border-2 border-gray-200 rounded-2xl shadow-lg overflow-hidden">
           {faqs.map((faq, index) => (
             <React.Fragment key={faq.number}>
               <div

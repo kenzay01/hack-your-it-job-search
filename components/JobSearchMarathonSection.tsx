@@ -27,7 +27,7 @@ const JobSearchMarathonSection = () => {
             main: "Як «правильно» себе позиціювати та чому це важливо",
             subItems: [
               "Аналіз ринку вакансій: кількість вакансій, конкуренція, актуальність стеку, актуальність в Україні/ЄС",
-              "Побудова 'правильної' картинки",
+              "Побудова «правильної» картинки",
               "Токсичний розділ: накрутка досвіду",
             ],
           },
@@ -82,7 +82,7 @@ const JobSearchMarathonSection = () => {
           {
             main: "HR співбесіда",
             subItems: [
-              "Створення твоєї 'легенди'",
+              "Створення твоєї «легенди»",
               "До яких питань потрібно готуватися",
               "Чому рекрутер - твій друг, а не ворог",
               "Приклади `правильних` відповідей на типові питання",
@@ -110,7 +110,7 @@ const JobSearchMarathonSection = () => {
             main: "Soft skills",
             subItems: [
               "STAR метод",
-              "Топ питань зі soft skills співбесід, як готуватися",
+              "Топ питань із soft skills співбесід, та як до них готуватись",
               "Найкращі риси топ спеціалістів",
               "Culture fit",
             ],
@@ -283,7 +283,7 @@ const JobSearchMarathonSection = () => {
                 <button
                   key={module.id}
                   onClick={() => setActiveModule(module.id)}
-                  className={`px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap border flex-shrink-0 ${
+                  className={`px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap border-2 flex-shrink-0 ${
                     activeModule === module.id
                       ? "bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white shadow-lg transform scale-105 border-purple-500"
                       : "bg-white text-gray-600 hover:bg-purple-100 shadow-sm hover:shadow-md border-gray-200 hover:border-purple-200"
@@ -301,7 +301,7 @@ const JobSearchMarathonSection = () => {
               <div
                 className={`${
                   gradientClass[(activeModule - 1) % gradientClass.length]
-                } relative rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all border border-gray-200 duration-300 min-h-[400px] flex flex-col max-w-4xl w-full`}
+                } relative rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all border-2 border-gray-200 duration-300 min-h-[400px] flex flex-col max-w-4xl w-full`}
               >
                 <div className="flex flex-col h-full">
                   <div className="text-center mb-4 flex items-center justify-start gap-4">
@@ -348,7 +348,7 @@ const JobSearchMarathonSection = () => {
         }
       `}</style>
       {/* Додаткова інформація */}
-      <div className="mt-12 mx-6 bg-gradient-to-br from-[var(--main-two-color)] to-[var(--secondary-color)] rounded-2xl p-8 text-center border border-gray-200 hover:scale-[1.01] transition-transform duration-300">
+      <div className="mt-12 mx-6 bg-gradient-to-br from-[var(--main-two-color)] to-[var(--secondary-color)] rounded-2xl p-8 text-center border-2 border-gray-200 hover:scale-[1.01] transition-transform duration-300">
         <h3 className="text-2xl font-bold text-white mb-4">
           Що гарантує результат:
         </h3>

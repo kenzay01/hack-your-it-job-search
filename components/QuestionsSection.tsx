@@ -176,7 +176,7 @@ Telegram: ${data.telegram}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold mb-2 uppercase">
+          <h2 className="text-4xl font-bold mb-2 uppercase text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
             Залишилися запитання?
           </h2>
           <p className="text-lg md:text-xl text-white mb-4">
@@ -192,7 +192,7 @@ Telegram: ${data.telegram}
             <span>Або одразу пиши в підтримку Telegram</span>
           </a>
         </div>
-        <div className="max-w-4xl mx-auto bg-radial to-[var(--secondary-color)] from-gray-500/10 rounded-2xl p-6 border border-gray-200 relative z-10">
+        <div className="max-w-4xl mx-auto bg-radial to-[var(--secondary-color)] from-gray-500/10 rounded-2xl p-6 border-2 border-gray-200 relative z-10">
           <h1 className="uppercase text-2xl md:text-3xl font-semibold mb-4">
             Залишіть заявку
           </h1>
@@ -211,7 +211,7 @@ Telegram: ${data.telegram}
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]"
+                  className="mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border-2 border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]"
                   placeholder="Введіть ваше ім'я"
                   required
                 />
@@ -229,7 +229,7 @@ Telegram: ${data.telegram}
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border ${
+                  className={`mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border-2 ${
                     phoneError ? "border-red-500" : "border-white/30"
                   } focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]`}
                   placeholder="+380123456789"
@@ -252,7 +252,7 @@ Telegram: ${data.telegram}
                   value={formData.telegram}
                   onChange={handleChange}
                   onFocus={handleTelegramFocus}
-                  className="mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]"
+                  className="mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border-2 border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]"
                   placeholder="@nickname"
                   required
                 />
@@ -296,7 +296,7 @@ Telegram: ${data.telegram}
             </div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 hover:-translate-y-0.5"
+              className="mx-auto bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 hover:-translate-y-0.5"
             >
               <span>Залишити заявку</span>
               <HiOutlineCursorClick className="w-8 h-8" />

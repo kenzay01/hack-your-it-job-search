@@ -84,7 +84,7 @@ const WhyItWorksSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`${feature.bgColor} p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 h-full group`}
+              className={`${feature.bgColor} p-6 rounded-xl border-2 border-gray-200 hover:shadow-lg transition-all duration-300 h-full group`}
             >
               <div className="text-4xl mb-4  group-hover:scale-105 transition-transform duration-300">
                 <feature.icon className={`text-white`} size={48} />

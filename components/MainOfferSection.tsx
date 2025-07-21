@@ -83,7 +83,7 @@ const MainOfferSection = () => {
               return (
                 <div
                   key={index}
-                  className={`${group.color} relative text-center rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-gray-200 hover:-translate-y-1 duration-300`}
+                  className={`${group.color} relative text-center rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-2 border-gray-200 hover:-translate-y-1 duration-300`}
                 >
                   <div
                     className={`absolute -top-15 left-1/2 transform -translate-x-1/2 w-46 h-auto rounded-2xl flex items-center justify-center mb-4`}
@@ -108,7 +108,7 @@ const MainOfferSection = () => {
             })}
           </div>
 
-          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl py-6 px-4 md:p-6 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
+          <div className="bg-[var(--secondary-color)] border-2 border-gray-200 rounded-3xl py-6 px-4 md:p-6 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
             <div className="text-center mb-4 md:mb-8">
               <h3 className="text-xl md:text-2xl font-bold mb-2">
                 За 14 днів ти побудуєш власну систему, яка приводить до першого
@@ -143,7 +143,7 @@ const MainOfferSection = () => {
             </div>
           </div>
 
-          <div className="bg-[var(--secondary-color)] border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
+          <div className="bg-[var(--secondary-color)] border-2 border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
             <div className="text-center mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Результат:{" "}

@@ -42,7 +42,7 @@ const MarathonPromoBlock = () => {
   };
 
   return (
-    <div className="bg-[var(--secondary-color)] border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
         <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
           {/* Таймер */}
@@ -86,7 +86,7 @@ const MarathonPromoBlock = () => {
               Спеціальні умови:
             </h3>
             <div className="space-y-3">
-              <div className="bg-transparent p-2 border border-gray-200 rounded-lg">
+              <div className="bg-transparent p-2 border-2 border-gray-200/30 rounded-lg">
                 <div className="flex items-center justify-center lg:justify-start gap-2 mb-1">
                   <span className="text-lg">🔥</span>
                   <span className="font-bold text-white custom-text">
@@ -100,7 +100,7 @@ const MarathonPromoBlock = () => {
                   Тривалість знижки: 48 год
                 </p>
               </div>
-              <div className="bg-transparent rounded-lg p-2 border border-gray-200">
+              <div className="bg-transparent rounded-lg p-2 border-2 border-gray-200/30">
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <span className="text-lg">🎁</span>
                   <div className="font-bold text-white text-sm custom-text">
