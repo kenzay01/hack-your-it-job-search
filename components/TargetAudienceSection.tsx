@@ -68,7 +68,10 @@ const TargetAudienceSection = () => {
   ];
 
   return (
-    <section className="relative pt-8 sm:pt-12 md:pt-16 bg-[var(--secondary-color)] text-white">
+    <section
+      className="relative pt-8 sm:pt-12 md:pt-16 bg-[var(--secondary-color)] text-white"
+      id="who"
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
@@ -76,12 +79,12 @@ const TargetAudienceSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 uppercase px-2">
               Цей марафон для тебе, якщо:
             </h2>
-            <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto px-2">
+            {/* <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto px-2">
               Перевір себе за цими 5 категоріями.{" "}
               <span className="text-[#8447e9]">
                 Якщо хоч 2 пункти про тебе – зустрінемось на марафоні
               </span>
-            </p>
+            </p> */}
           </div>
 
           {/* Target Categories */}
@@ -109,8 +112,11 @@ const TargetAudienceSection = () => {
                       >
                         <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--main-two-color)]" />
                       </div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">
-                        {index + 1}. {category.title}
+                      <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-0">
+                        {index + 1}.{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                          {category.title}
+                        </span>
                       </h3>
                     </div>
                     <ul className="flex flex-col">
@@ -135,16 +141,14 @@ const TargetAudienceSection = () => {
           {/* Call to Action */}
           <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                Якщо хоч{" "}
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">
+                Якщо{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-                  2 пункти про вас
-                </span>
+                  хоча б
+                </span>{" "}
+                2 пункти про вас – зустрінемось на марафоні й закриємо ваші
+                потреби за 14 днів.
               </h3>
-              <ArrowDown className="w-6 h-6 mx-auto mb-2" />
-              <p className="text-lg sm:text-xl text-white mb-6 md:mb-8 md:px-2">
-                зустрінемось на марафоні й закриємо ваші потреби за 14 днів
-              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <ScrollLink
@@ -153,12 +157,12 @@ const TargetAudienceSection = () => {
                   duration={500}
                   className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto cursor-pointer"
                 >
-                  Приєднатися до марафону
+                  Забронювати місце
                 </ScrollLink>
-                <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
+                {/* <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
                   <CheckCircle className="w-5 h-5" />
                   <span>Гарантія результату</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

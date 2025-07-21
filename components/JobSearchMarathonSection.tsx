@@ -188,12 +188,21 @@ const JobSearchMarathonSection = () => {
         subItems?: Item[];
       };
 
-  const renderItems = (items: Item[]) => {
+  const renderItems = (items: Item[], isTopLevel = false) => {
     return items.map((item, index) => {
       if (typeof item === "object" && "main" in item) {
+        const hasSubItems = item.subItems && item.subItems.length > 0;
+        const topLevelWithoutSubItems = isTopLevel && !hasSubItems;
+
         return (
           <div key={index} className="mb-3 last:mb-0">
-            <div className="mb-3 flex items-center py-2 px-3 rounded-lg bg-white/10 hover:bg-white/15 transition-all duration-300 group border border-white/20 hover:border-white/30 shadow-sm min-h-[25px]">
+            <div
+              className={`mb-3 flex items-center py-2 px-3 rounded-lg transition-all duration-300 group shadow-sm min-h-[25px] ${
+                topLevelWithoutSubItems
+                  ? "bg-white/10 hover:bg-white/15 border-2 border-white/50 hover:border-white/70 ring-1 ring-white/20"
+                  : "bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/30"
+              }`}
+            >
               <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0 rounded-lg bg-white/20 group-hover:bg-white/25 transition-colors">
                 <Target className="w-3 h-3 text-white/80" />
               </div>
@@ -202,7 +211,9 @@ const JobSearchMarathonSection = () => {
               </span>
             </div>
             {item.subItems && (
-              <div className="ml-8 space-y-2">{renderItems(item.subItems)}</div>
+              <div className="space-y-2">
+                {renderItems(item.subItems, false)}
+              </div>
             )}
           </div>
         );
@@ -210,12 +221,22 @@ const JobSearchMarathonSection = () => {
         return (
           <div
             key={index}
-            className="flex items-center py-2 px-3 rounded-lg bg-white/10 hover:bg-white/15 transition-all duration-300 mb-3 last:mb-0 group border border-white/20 hover:border-white/30 shadow-sm min-h-[25px]"
+            className={`flex items-center transition-all duration-300 mb-3 last:mb-0 min-h-[25px] ${
+              isTopLevel
+                ? "py-2 px-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/30 shadow-sm group"
+                : "py-1 px-3"
+            }`}
           >
             <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0 rounded-lg bg-white/20 group-hover:bg-white/25 transition-colors">
               <Target className="w-3 h-3 text-white/80" />
             </div>
-            <span className="text-white text-sm sm:text-base leading-relaxed group-hover:text-white/95 transition-colors">
+            <span
+              className={`${
+                isTopLevel
+                  ? "text-white text-sm sm:text-base leading-relaxed group-hover:text-white/95 transition-colors font-semibold"
+                  : "text-white text-sm sm:text-base leading-relaxed group-hover:text-white/95 transition-colors"
+              }`}
+            >
               {item}
             </span>
           </div>
@@ -237,7 +258,7 @@ const JobSearchMarathonSection = () => {
   return (
     <section
       id="program"
-      className="py-8 sm:py-12 md:py-24 bg-[var(--secondary-color)] text-white relative"
+      className="py-8 max-w-6xl mx-auto sm:py-12 md:py-24 bg-[var(--secondary-color)] text-white relative"
     >
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
@@ -255,7 +276,7 @@ const JobSearchMarathonSection = () => {
                 <button
                   key={module.id}
                   onClick={() => setActiveModule(module.id)}
-                  className={`px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap border ${
+                  className={`px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap border flex-shrink-0 ${
                     activeModule === module.id
                       ? "bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white shadow-lg transform scale-105 border-purple-500"
                       : "bg-white text-gray-600 hover:bg-purple-100 shadow-sm hover:shadow-md border-gray-200 hover:border-purple-200"
@@ -277,7 +298,7 @@ const JobSearchMarathonSection = () => {
               >
                 <div className="flex flex-col h-full">
                   <div className="text-center mb-4 flex items-center justify-start gap-4">
-                    <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-xl bg-white/15 backdrop-blur-sm">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-xl bg-white/15 backdrop-blur-sm flex-shrink-0">
                       {currentModule.icon}
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
@@ -293,7 +314,7 @@ const JobSearchMarathonSection = () => {
                         scrollbarColor: "#888 #333",
                       }}
                     >
-                      {renderItems(currentModule.category.items)}
+                      {renderItems(currentModule.category.items, true)}
                     </div>
                   </div>
                 </div>
@@ -319,6 +340,46 @@ const JobSearchMarathonSection = () => {
           background-color: var(--main-color);
         }
       `}</style>
+      {/* Додаткова інформація */}
+      <div className="mt-12 mx-6 bg-gradient-to-br from-[var(--main-two-color)] to-[var(--secondary-color)] rounded-2xl p-8 text-center border border-gray-200 hover:scale-[1.01] transition-transform duration-300">
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Що гарантує результат:
+        </h3>
+        <div className="grid md:grid-cols-2 gap-6 text-white">
+          <div className="flex items-start space-x-3">
+            <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+            <p className="text-left">
+              <strong>Live-сесії з Дмитром</strong> + взаємодія з куратором →
+              ставите питання в реальному часі, отримуєте відповіді «на місці».
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+            <p className="text-left">
+              <strong>
+                Ви будете відчувати результат вже під час марафону
+              </strong>{" "}
+              – після впровадження домашніх завдань конверсія вашого CV та
+              LinkedIn у пропозиції збільшиться.
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+            <p className="text-left">
+              <strong>Чітка гарантія</strong> – якщо протягом 7 днів не бачите
+              прогресу (оновлене CV, LinkedIn, план пошуку) – повертаємо кошти
+              без зайвих запитань.
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+            <p className="text-left">
+              <strong>Весь мій 7-річний бекграунд</strong> у форматі 14-денного
+              спринту – 100+ власних співбесід і 150+ студентів.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { ArrowRight, Check, X } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 const PricingSection = () => {
   const tariffs = [
@@ -10,65 +10,105 @@ const PricingSection = () => {
       name: "Basic",
       price: "$119",
       discountPrice: "$99",
+      btn: "ОБРАТИ BASIC",
       features: [
-        { text: "Твоє позиціювання та упаковка", included: true },
-        { text: "Пошук роботи", included: true },
-        { text: "Співбесіди", included: true },
-        { text: "1 QnA", included: true },
-        { text: "Конспекти матеріалів в Notion", included: true },
-        { text: "Спільний чат з учасниками тарифу", included: true },
+        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
+        { text: "2 модуль: Пошук роботи", included: true },
+        { text: "3 модуль: Співбесіди", included: true },
+        {
+          text: "1 Q&A сесія",
+          included: true,
+          label: "Загальна для Basic, Pro та Vip",
+        },
         { text: "Підтримка куратора в чаті", included: true },
+        { text: "Спільний чат з учасниками тарифу", included: true },
+        {
+          text: "Конспекти матеріалів у Notion",
+          included: true,
+          label: "Бонус",
+        },
       ],
     },
     {
       name: "Pro",
       price: "$179",
       discountPrice: "$154",
+      btn: "ОБРАТИ PRO",
       features: [
-        { text: "Твоє позиціювання та упаковка", included: true },
-        { text: "Пошук роботи", included: true },
-        { text: "Співбесіди", included: true },
-        { text: "1 QnA", included: true },
-        { text: "Конспекти матеріалів в Notion", included: true },
-        { text: "Прокачка себе як спеціаліста", included: true },
-        { text: "Спільний чат з учасниками тарифу та Дмитром", included: true },
+        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
+        { text: "2 модуль: Пошук роботи", included: true },
+        { text: "3 модуль: Співбесіди", included: true },
         {
-          text: "Гроші: Як вибивати кращі офери? (без прямих контрактів???)",
+          text: "4 модуль: Гроші - Як вибивати кращі офери",
+          included: true,
+        },
+        { text: "5 модуль: Прокачка себе як спеціаліста", included: true },
+        {
+          text: "1 Q&A сесія",
+          included: true,
+          label: "Загальна для Basic, Pro та Vip",
+        },
+        {
+          text: "1 live практикум – Soft skills + HR інтерв’ю (Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.)",
+          included: true,
+          label: "Загальний для Pro та Vip",
+        },
+        { text: "Підтримка куратора 1 на 1", included: true },
+        {
+          text: "Спільний чат з учасниками тарифу та Дмитром",
           included: true,
         },
         {
-          text: "1 live практикум - Soft skills + HR interview",
+          text: "Конспекти матеріалів у Notion",
           included: true,
+          label: "Бонус",
         },
-        { text: "Підтримка куратора 1:1", included: true },
       ],
     },
     {
       name: "VIP",
       price: "$299",
       discountPrice: "$269",
+      btn: "ОБРАТИ VIP",
       features: [
-        { text: "Твоє позиціювання та упаковка", included: true },
-        { text: "Пошук роботи", included: true },
-        { text: "Співбесіди", included: true },
-        { text: "1 QnA", included: true },
-        { text: "Конспекти матеріалів в Notion", included: true },
-        { text: "Прокачка себе як спеціаліста", included: true },
+        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
+        { text: "2 модуль: Пошук роботи", included: true },
+        { text: "3 модуль: Співбесіди", included: true },
         {
-          text: "Гроші: Як вибивати кращі офери + ефір про прямі контракти",
+          text: "4 модуль: Гроші - Як вибивати кращі офери - Прямі контракти та офери вище 3 квартилю",
           included: true,
         },
-        { text: "Підтримка куратора в чаті", included: true },
+        { text: "5 модуль: Прокачка себе як спеціаліста", included: true },
+        { text: "6 модуль: Робота", included: true },
         {
-          text: "1 live практикум - Soft skills + HR interview",
+          text: "1 Q&A сесія",
+          included: true,
+          label: "Загальна для Basic, Pro та Vip",
+        },
+        {
+          text: "1 live практикум – Soft skills + HR інтерв’ю (Формат інтерактив: розбираємо типові Soft-skills та HR-запитання, відпрацьовуємо відповіді й тренуємося перед співбесідою.)",
+          included: true,
+          label: "Загальний для Pro та Vip",
+        },
+        {
+          text: "1 Q&A сесія",
+          included: true,
+          label: "Тільки для Vip",
+        },
+        {
+          text: "1 live практикум – прямі контракти",
+          included: true,
+          label: "Тільки для Vip",
+        },
+        {
+          text: "Підтримка та чат з Дімою 1 на 1",
           included: true,
         },
-        { text: "Робота (бонус)", included: true },
-        { text: "1 QnA для ВІП", included: true },
-        { text: "Live розбори оферів + прямі контракти", included: true },
+        { text: "Спільний чат з учасниками тарифу та Дмитром", included: true },
         {
-          text: "Спільний чат з учасниками тарифу + 1 на 1 чат з Дмитром",
+          text: "Конспекти матеріалів у Notion",
           included: true,
+          label: "Бонус",
         },
       ],
     },
@@ -89,13 +129,6 @@ const PricingSection = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-12 text-white tracking-wide">
           ОБЕРИ СВІЙ ТАРИФ
         </h2>
-        <p className="text-center md:text-lg text-blue-100 mb-8">
-          Для перших 48 год даємо{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-            -20 $ / -25 $ / -30 ${" "}
-          </span>{" "}
-          – стимул швидкої оплати без знецінення базової ціни.
-        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {tariffs.map((tariff, index) => (
             <div
@@ -106,29 +139,29 @@ const PricingSection = () => {
                 {tariff.name}
               </h3>
               <div className="font-semibold text-center mb-4 ml-4 flex items-end justify-center space-x-1">
-                <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-l from-[var(--main-color)] to-[var(--main-two-color)] drop-shadow-sm ">
+                <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-l from-[var(--main-color)] to-[var(--main-two-color)] drop-shadow-sm">
                   {tariff.discountPrice}
                 </span>
-                <span className=" line-through text-gray-400">
+                <span className="line-through text-gray-400">
                   {tariff.price}
                 </span>
               </div>
               <ul className="space-y-2 md:space-y-4 mb-6">
                 {tariff.features.map((feature, index) => (
-                  <li
-                    key={index}
-                    className={`flex items-center space-x-2 p-1 rounded-xl ${
-                      feature.included ? "" : "text-gray-300 line-through"
-                    }`}
-                  >
-                    <span className="bg-[var(--main-two-color)] p-1 rounded-full">
-                      {feature.included ? (
-                        <Check className="w-4 h-4 text-white" />
-                      ) : (
-                        <X className="w-4 h-4 text-white" />
+                  <li key={index} className="flex flex-col space-y-1">
+                    <div className={`${feature.label && ""}`}>
+                      {feature.label && (
+                        <span className="text-gray-400 block mb-1 pl-4">
+                          {feature.label}
+                        </span>
                       )}
-                    </span>
-                    <span>{feature.text}</span>
+                      <div className="flex items-center space-x-2 p-1 rounded-xl">
+                        <span className="bg-[var(--main-two-color)] p-1 rounded-full">
+                          <Check className="w-4 h-4 text-white" />
+                        </span>
+                        <span>{feature.text}</span>
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -138,18 +171,18 @@ const PricingSection = () => {
                 duration={500}
                 className="w-full bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 cursor-pointer"
               >
-                <span>Обрати</span>
+                <span>{tariff.btn}</span>
                 <ArrowRight className="w-5 h-5" />
               </ScrollLink>
             </div>
           ))}
         </div>
-        <p className="text-center mt-8 custom-text uppercase">
+        {/* <p className="text-center mt-8 custom-text uppercase">
           До кінця знижки залишилося{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
             48 год
           </span>
-        </p>
+        </p> */}
       </div>
     </section>
   );

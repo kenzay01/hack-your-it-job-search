@@ -271,6 +271,19 @@ const CasesSlider = () => {
                 />
               ))}
             </div>
+            <div className="text-center mt-6">
+              <p className="text-white text-sm">
+                Всі інші кейси студентів можливо переглянути по{" "}
+                <a
+                  href="https://troubled-glove-959.notion.site/dpuchkov-it-5e802642bfe74e98a9ab51464332caf1?pvs=25"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-[var(--main-two-color)] transition-colors"
+                >
+                  цьому посиланню
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Desktop Layout */}
@@ -338,14 +351,14 @@ const CasesSlider = () => {
             {/* Link to more cases */}
             <div className="text-center mt-6">
               <p className="text-white text-lg">
-                Дізнайтесь про інші кейси наших студентів на{" "}
+                Всі інші кейси студентів можливо переглянути по{" "}
                 <a
                   href="https://troubled-glove-959.notion.site/dpuchkov-it-5e802642bfe74e98a9ab51464332caf1?pvs=25"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-[var(--main-two-color)] transition-colors"
                 >
-                  нашій сторінці
+                  цьому посиланню
                 </a>
               </p>
             </div>

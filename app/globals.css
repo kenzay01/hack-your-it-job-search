@@ -10,11 +10,20 @@
 }
 
 body {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-roboto);
   background-color: var(--secondary-color);
 }
 
 .custom-text {
+  font-family: var(--font-roboto);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: var(--font-roboto);
 }
 

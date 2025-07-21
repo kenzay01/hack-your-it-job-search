@@ -78,7 +78,7 @@ const WhyItWorksSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Чому цей марафон працює:
           </h2>
-          <p className="text-lg md:text-xl text-blue-100">
+          <p className="text-lg md:text-xl text-white">
             Наш підхід –{" "}
             <span className="text-[#8447e9]">
               «20% зусиль → 80% результату»
@@ -105,48 +105,6 @@ const WhyItWorksSection = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Додаткова інформація */}
-        <div className="mt-12 bg-radial-[at_90%_120%] from-[var(--main-two-color)]  to-[var(--secondary-color)] to-60% rounded-2xl p-8 text-center border border-gray-200 hover:scale-101 transition-transform duration-300">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Що гарантує результат:
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6 text-white">
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <p className="text-left">
-                <strong>Live-сесії з Дмитром</strong> + взаємодія з куратором →
-                ставите питання в реальному часі, отримуєте відповіді «на
-                місці».
-              </p>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <p className="text-left">
-                <strong>
-                  Ви будете відчувати результат вже під час марафону
-                </strong>{" "}
-                – після впровадження домашніх завдань конверсія вашого CV та
-                LinkedIn у пропозиції збільшиться.
-              </p>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <p className="text-left">
-                <strong>Чітка гарантія</strong> – якщо протягом 7 днів не бачите
-                прогресу (оновлене CV, LinkedIn, план пошуку) – повертаємо кошти
-                без зайвих запитань.
-              </p>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <p className="text-left">
-                <strong>Весь мій 7-річний бекграунд</strong> у форматі
-                14-денного спринту – 100+ власних співбесід і 150+ студентів.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       {/* <div className="absolute bottom-0 left-0 w-full">

@@ -1,16 +1,14 @@
+"use client";
+
 import React from "react";
-import {
-  Target,
-  TrendingUp,
-  Award,
-  CheckCircle,
-  ArrowRight,
-} from "lucide-react";
+import { Target, TrendingUp, Award } from "lucide-react";
 import Image from "next/image";
 import offerImg1 from "@/public/offers/sticker3.png";
 import offerImg2 from "@/public/offers/sticker.png";
 import offerImg3 from "@/public/offers/sticker-1.png";
-import checkImg from "@/public/check.png";
+// import checkImg2 from "@/public/check.png";
+import checkImg from "@/public/check.webp";
+import { Link as ScrollLink } from "react-scroll";
 
 const MainOfferSection = () => {
   const targetGroups = [
@@ -87,7 +85,7 @@ const MainOfferSection = () => {
                   className={`${group.color} relative text-center rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-gray-200 hover:-translate-y-1 duration-300`}
                 >
                   <div
-                    className={`absolute -top-14 left-1/2 transform -translate-x-1/2 w-46 h-auto rounded-2xl flex items-center justify-center mb-4`}
+                    className={`absolute -top-15 left-1/2 transform -translate-x-1/2 w-46 h-auto rounded-2xl flex items-center justify-center mb-4`}
                   >
                     <Image
                       src={IconComponent}
@@ -106,13 +104,13 @@ const MainOfferSection = () => {
             })}
           </div>
 
-          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl py-6 px-4 md:p-12 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
+          <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl py-6 px-4 md:p-6 text-white mb-12 hover:scale-101  hover:border-white/55 transition-all duration-300 hover:shadow-2xl mx-4 md:mx-0">
             <div className="text-center mb-4 md:mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-xl md:text-2xl font-bold mb-2">
                 За 14 днів ти побудуєш власну систему, яка приводить до першого
                 офера
               </h3>
-              <p className="text-lg md:text-xl text-blue-100">
+              <p className="md:text-lg text-white">
                 або дає{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                   +$6000
@@ -126,7 +124,7 @@ const MainOfferSection = () => {
                   key={index}
                   className="flex items-center space-x-4 justify-start"
                 >
-                  <div className="md:w-8 md:h-8 w-6 h-6  rounded-full flex items-center justify-center flex-shrink-0 drop-shadow-[0px_0px_2px_white]">
+                  <div className="md:w-8 md:h-8 w-6 h-6  rounded-full flex items-center justify-center flex-shrink-0">
                     <Image
                       src={checkImg}
                       alt="Check"
@@ -142,7 +140,7 @@ const MainOfferSection = () => {
           </div>
 
           <div className="bg-radial to-[var(--secondary-color)] from-gray-500/20 border border-gray-200 rounded-3xl p-8 shadow-lg hover:scale-101 transition-all duration-300 mx-4 md:mx-0">
-            <div className="text-center">
+            <div className="text-center mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Результат:{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
@@ -185,10 +183,16 @@ const MainOfferSection = () => {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto">
-                <span>Почати за 14 днів</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="mx-auto flex w-full items-center justify-center">
+                <ScrollLink
+                  to="questions"
+                  smooth={true}
+                  duration={500}
+                  className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto"
+                >
+                  <span>Доєднатись до марафону</span>
+                </ScrollLink>
+              </div>
             </div>
           </div>
         </div>

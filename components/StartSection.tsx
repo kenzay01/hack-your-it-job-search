@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock, Gift, Calendar, Timer } from "lucide-react";
 
-const StartSection = () => {
+const MarathonPromoBlock = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -13,86 +12,135 @@ const StartSection = () => {
   });
 
   useEffect(() => {
-    const endDate = new Date("2025-07-28T19:00:00+03:00");
-    const updateTimer = () => {
-      const now = new Date();
-      const diff = endDate.getTime() - now.getTime();
-      if (diff <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      setTimeLeft({ days, hours, minutes, seconds });
-    };
+    // Встановлюємо дату закінчення таймера (2 дні від поточного моменту)
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 2);
 
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    return () => clearInterval(interval);
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
+  const formatTime = (time: number) => {
+    return time.toString().padStart(2, "0");
+  };
+
   return (
-    <section
-      id="start"
-      className="py-28 bg-radial from-[var(--main-two-color)] to-80% to-[var(--secondary-color)] text-white relative"
-      style={{
-        clipPath: "polygon(100% 10%, 100% 75%, 0 90%, 0 25%)",
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Desktop Layout */}
-        <div className="hidden md:block">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Стартуємо 28 липня о 19:00 по Києву
-          </h2>
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <Clock className="w-6 h-6 text-yellow-400" />
-            <p className="text-lg font-semibold text-white">
-              До закриття продажу залишилося: {timeLeft.days} дн.{" "}
-              {timeLeft.hours} год. {timeLeft.minutes} хв. {timeLeft.seconds}{" "}
-              сек.
-            </p>
+    <div className="bg-[var(--secondary-color)] border border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+      <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
+        {/* Таймер */}
+        <div className="text-center lg:text-left mb-4 md:mb-0">
+          <h3 className="text-xl md:text-lg font-semibold text-white text-center custom-text flex items-center justify-center lg:justify-start gap-2">
+            До підвищення ціни залишилось:
+          </h3>
+          <div className="flex justify-center lg:justify-start gap-2 md:gap-4 mb-4 items-center h-full">
+            <div className="text-center md:text-start">
+              <div className="text-4xl lg:text-5xl font-bold text-[#8447e9] rounded-lg  min-w-[60px] custom-text">
+                {formatTime(timeLeft.days)}
+              </div>
+              <div className="text-sm text-gray-300 mt-1">Дн.</div>
+            </div>
+            <div className="text-center md:text-start">
+              <div className="text-4xl lg:text-5xl font-bold text-[#8447e9] rounded-lg  min-w-[60px] custom-text">
+                {formatTime(timeLeft.hours)}
+              </div>
+              <div className="text-sm text-gray-300 mt-1">Год.</div>
+            </div>
+            <div className="text-center md:text-start">
+              <div className="text-4xl lg:text-5xl font-bold text-[#8447e9] rounded-lg  min-w-[60px] custom-text">
+                {formatTime(timeLeft.minutes)}
+              </div>
+              <div className="text-sm text-gray-300 mt-1">Хв.</div>
+            </div>
+            <div className="text-center md:text-start">
+              <div className="text-4xl lg:text-5xl font-bold text-[#8447e9] rounded-lg  min-w-[60px] custom-text">
+                {formatTime(timeLeft.seconds)}
+              </div>
+              <div className="text-sm text-gray-300 mt-1">Сек.</div>
+            </div>
           </div>
-          <ScrollLink
-            to="pricing"
-            smooth={true}
-            duration={500}
-            className="inline-flex bg-radial to-[var(--secondary-color)] from-gray-800/90 border border-gray-200 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl items-center space-x-2 cursor-pointer hover:scale-101"
-          >
-            <span>Хочу результат за 14 днів</span>
-            <ArrowRight className="w-5 h-5" />
-          </ScrollLink>
         </div>
 
-        {/* Mobile Layout */}
-        <div className="md:hidden">
-          <h2 className="text-xl font-bold text-white mb-4 px-4 leading-tight">
-            Стартуємо 28 липня о 19:00 по Києву
-          </h2>
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-1 space-x-3 mb-6 px-4">
-            <Clock className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-            <p className="text-sm font-semibold text-white leading-tight">
-              До закриття: {timeLeft.days} дн. {timeLeft.hours} год.{" "}
-              {timeLeft.minutes} хв. {timeLeft.seconds} сек.
-            </p>
+        {/* Спеціальні умови */}
+        <div className=" text-center lg:text-left">
+          <h3 className="text-xl md:text-lg font-semibold text-white custom-text mb-4 flex items-center justify-center lg:justify-start gap-2">
+            Спеціальні умови:
+          </h3>
+          <div className="space-y-3">
+            <div className="bg-transparent p-2 border border-gray-200 rounded-lg">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-1">
+                <span className="text-lg">🔥</span>
+                <span className="font-bold text-white custom-text">
+                  Знижка на кожен тариф:
+                </span>
+              </div>
+              <div className="font-bold text-[#8447e9] text-sm custom-text text-center">
+                -20$ / -25$ / -30$
+              </div>
+              <p className="text-sm text-gray-300 mt-2">
+                Тривалість знижки: 48 год
+              </p>
+            </div>
+            <div className="bg-transparent rounded-lg p-2 border border-gray-200">
+              <div className="flex items-center justify-center lg:justify-start gap-2">
+                <span className="text-lg">🎁</span>
+                <div className="font-bold text-white text-sm custom-text">
+                  <span className="text-[#8447e9]">‑15%</span> на наступний
+                  продукт
+                </div>
+              </div>
+            </div>
           </div>
-          <ScrollLink
-            to="pricing"
-            smooth={true}
-            duration={500}
-            className="inline-flex bg-radial to-[var(--secondary-color)] from-gray-800/90 border border-gray-200 text-white px-6 py-4 rounded-lg font-bold text-base transition-all duration-300 shadow-lg hover:shadow-xl items-center justify-center w-[calc(100%-2rem)] mx-4"
-          >
-            <span>Хочу результат за 14 днів</span>
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </ScrollLink>
+        </div>
+
+        {/* Старт потоку */}
+        <div className=" text-center lg:text-left">
+          <h3 className="text-xl md:text-lg font-semibold text-white mb-4 flex items-center justify-center lg:justify-start gap-2 custom-text">
+            Старт марафону:
+          </h3>
+          <div className="bg-transparent rounded-lg md:mt-15">
+            <div className="text-3xl lg:text-4xl font-bold text-[#8447e9] mb-2 custom-text uppercase">
+              Субота, 2 серпня
+            </div>
+            <div className="text-sm text-white font-medium custom-text">
+              Перша загальна Q&A сесія
+            </div>
+          </div>
+        </div>
+
+        {/* Тривалість */}
+        <div className="text-center lg:text-left">
+          <h3 className="text-xl md:text-lg font-semibold text-white mb-4 flex items-center justify-center lg:justify-start gap-2 custom-text">
+            Тривалість:
+          </h3>
+          <div className="bg-transparent rounded-lg md:mt-14">
+            <div className="text-3xl lg:text-4xl font-bold text-[#8447e9] mb-2 custom-text uppercase">
+              14 днів
+            </div>
+            <div className="text-sm text-white font-medium custom-text">
+              + 7 днів бонус‑підтримки
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default StartSection;
+export default MarathonPromoBlock;

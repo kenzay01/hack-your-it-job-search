@@ -175,7 +175,7 @@ Telegram: ${data.telegram}
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6">
           <h2 className="text-4xl font-bold mb-2">Залишилися запитання?</h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-4">
+          <p className="text-lg md:text-xl text-white mb-4">
             Залиш свої контакти і наша команда зв`яжеться з тобою
           </p>
           <a
@@ -189,12 +189,15 @@ Telegram: ${data.telegram}
           </a>
         </div>
         <div className="max-w-4xl mx-auto bg-radial to-[var(--secondary-color)] from-gray-500/20 rounded-2xl p-6 border border-gray-200 relative z-10">
+          <h1 className="uppercase text-2xl md:text-3xl font-semibold mb-4">
+            Залишіть заявку
+          </h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-blue-100"
+                  className="block text-sm font-medium text-white"
                 >
                   Твоє ім`я
                 </label>
@@ -212,7 +215,7 @@ Telegram: ${data.telegram}
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-blue-100"
+                  className="block text-sm font-medium text-white"
                 >
                   Твій номер телефону
                 </label>
@@ -234,7 +237,7 @@ Telegram: ${data.telegram}
               <div>
                 <label
                   htmlFor="telegram"
-                  className="block text-sm font-medium text-blue-100"
+                  className="block text-sm font-medium text-white"
                 >
                   Твій нікнейм в Telegram
                 </label>
@@ -252,7 +255,7 @@ Telegram: ${data.telegram}
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-blue-100">
+              <label className="block text-sm font-medium text-white">
                 Наскільки тобі цікавий марафон по пошуку роботи?
               </label>
               <div className="mt-2 pl-2 flex flex-col gap-2">

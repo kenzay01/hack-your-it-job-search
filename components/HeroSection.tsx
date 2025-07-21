@@ -1,16 +1,20 @@
+"use client";
+
 import React from "react";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
-import logo1 from "@/public/Csharp.png";
-import logo2 from "@/public/JS.png";
+// import logo1 from "@/public/Csharp.png";
+// import logo2 from "@/public/JS.png";
 import heroImgPng from "@/public/heroSection-Photoroom.png";
+import { HiOutlineCursorClick } from "react-icons/hi";
+import { Link as ScrollLink } from "react-scroll";
 
 const HeroSection = () => {
   return (
     <section className="relative bg-transparent text-white z-0">
       {/* Desktop layout - без змін */}
       <div className="hidden md:block">
-        <Image
+        {/* <Image
           src={logo1}
           alt="Logo 1"
           className="absolute top-62 right-126 w-28 h-auto z-20 -rotate-30 drop-shadow-2xl"
@@ -19,7 +23,7 @@ const HeroSection = () => {
           src={logo2}
           alt="Logo 2"
           className="absolute top-64 right-53 w-28 h-auto z-20 rotate-18 drop-shadow-2xl"
-        />
+        /> */}
         <div className="absolute top-19 right-38 w-132 h-auto drop-shadow-[0px_20px_75px_rgb(107,14,232,0.5)] z-20">
           <Image
             src={heroImgPng}
@@ -53,28 +57,43 @@ const HeroSection = () => {
         {/* <div className="absolute inset-0 bg-black/40 z-10"></div> */}
       </div>
 
-      <div className="md:pt-42 pb-6 bg-transparent text-white overflow-hidden z-30 relative">
+      <div className="md:pt-42 pb-12 bg-transparent text-white overflow-hidden z-30 relative">
         {/* Desktop content */}
         <div className="hidden md:block px-4 mr-72 relative z-30">
           <div className="max-w-4xl mx-auto text-start">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 hover:scale-103 transition-transform duration-300">
-              <Star className="w-4 h-4 text-[var(--main-two-color)] fill-current" />
-              <span className="text-sm font-medium">
-                Перевірено 150+ студентами
-              </span>
+            <div className="flex flex-row items-start space-y-1 space-x-1">
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-sm font-medium">
+                  Перевірено 150+ студентами
+                </span>
+              </div>
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-sm font-medium">
+                  Кожен 2‑й збільшив дохід у 1.5 рази
+                </span>
+              </div>
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-sm font-medium">
+                  5 особистих оферів за цей рік
+                </span>
+              </div>
             </div>
 
             <h1
               className={`text-4xl md:text-7xl font-bold mb-16 uppercase custom-text`}
             >
-              Як хакнути пошук роботи в{" "}
+              Хакни{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-                ІТ?
+                пошук роботи
               </span>
+              <br />в IT за 14 днів
             </h1>
             <div className="text-lg md:text-xl mb-4 text-white">
               <p className="font-semibold">
-                14-денний практичний марафон із Senior-розробником{" "}
+                Практичний марафон із Senior‑розробником{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                   Дмитром Пучковим
                 </span>
@@ -82,21 +101,22 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col items-start justify-bottom">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                «Хакни пошук роботи в ІТ за 14 днів»
-              </h2>
               <p className="text-white mb-6">
-                За 14 днів створи свою систему пошуку роботи яка дозволить тобі
-                вирости в доході{" "}
+                За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-two-color)] to-[var(--main-color)]">
-                  від 0 до $5000+
+                  з $0 до $5 000+.
                 </span>
               </p>
 
-              <button className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2">
-                <span>Почати за 14 днів</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <ScrollLink
+                to="questions"
+                smooth={true}
+                duration={500}
+                className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 custom-text"
+              >
+                <span>Долучитись до 14-денного марафону</span>
+                <HiOutlineCursorClick className="w-8 h-8" />
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -104,34 +124,57 @@ const HeroSection = () => {
         {/* Mobile content - розміщений поверх background image */}
         <div className="md:hidden px-4 relative z-40 min-h-screen flex flex-col justify-end pb-12">
           <div className="max-w-sm mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6 hover:scale-103 transition-transform duration-300">
-              <Star className="w-4 h-4 text-[var(--main-two-color)] fill-current" />
-              <span className="text-sm font-medium">
-                Перевірено 150+ студентами
-              </span>
+            <div className="flex flex-col items-center space-y-1 mb-2">
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-[11px] font-medium">
+                  Перевірено 150+ студентами
+                </span>
+              </div>
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-[11px] font-medium">
+                  Кожен 2‑й збільшив дохід у 1.5 рази
+                </span>
+              </div>
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5  hover:scale-103 transition-transform duration-300">
+                <Star className="w-4 h-4 text-[#8447e9] fill-current" />
+                <span className="text-[11px] font-medium">
+                  5 особистих оферів за цей рік
+                </span>
+              </div>
             </div>
 
-            <h1 className="text-3xl font-bold mb-4 uppercase leading-tight">
-              Як хакнути пошук роботи в{" "}
+            <h1 className="text-3xl font-bold mb-4 uppercase">
+              Хакни{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-                ІТ?
-              </span>
+                пошук роботи
+              </span>{" "}
+              в IT за 14 днів
             </h1>
 
-            <p className="text-white/95 mb-2 font-bold text-lg">
-              «Хакни пошук роботи в ІТ за 14 днів»
-            </p>
-            <p className="font-semibold mb-4">
-              14-денний практичний марафон із Senior-розробником{" "}
-              <span className="underline decoration-[var(--main-two-color)]">
+            <p className="font-semibold mb-2 custom-text">
+              Практичний марафон із Senior‑розробником{" "}
+              <span className="underline decoration-[var(--secondary-color)]">
                 Дмитром Пучковим
               </span>
             </p>
+            <p className="text-white mb-4 custom-text text-sm">
+              За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
+              <span className="underline decoration-[var(--secondary-color)]">
+                з $0 до $5 000+.
+              </span>
+            </p>
 
-            <button className="bg-gradient-to-br from-[var(--main-color)] to-[var(--main-two-color)] text-white px-6 py-3 rounded-lg font-bold  transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 mx-auto">
-              <span>Почати за 14 днів</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <ScrollLink
+              to="questions"
+              smooth={true}
+              duration={500}
+              className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-4 py-2 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 custom-text"
+            >
+              <span>Долучитись до 14-денного марафону</span>
+              <HiOutlineCursorClick className="w-8 h-8" />
+            </ScrollLink>
           </div>
         </div>
 
