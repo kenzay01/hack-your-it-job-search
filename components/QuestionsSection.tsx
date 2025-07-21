@@ -25,11 +25,17 @@ const QuestionsSection = () => {
       }
     }
 
+    if (name === "phone") {
+      if (!value.startsWith("+") || value === "") {
+        newValue = "+" + value.replace(/^\++/, "");
+      }
+    }
+
     setFormData({ ...formData, [name]: newValue });
 
     if (name === "phone") {
       const phoneRegex = /^\+380\d{9}$/;
-      if (!phoneRegex.test(value) && value !== "") {
+      if (!phoneRegex.test(newValue) && newValue !== "+") {
         setPhoneError("Введіть номер у форматі +380123456789");
       } else {
         setPhoneError("");
@@ -40,6 +46,12 @@ const QuestionsSection = () => {
   const handleTelegramFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     if (!formData.telegram.startsWith("@")) {
       setFormData({ ...formData, telegram: "@" + formData.telegram });
+    }
+  };
+
+  const handlePhoneFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    if (!formData.phone.startsWith("+")) {
+      setFormData({ ...formData, phone: "+" + formData.phone });
     }
   };
 
@@ -165,14 +177,6 @@ Telegram: ${data.telegram}
     <section
       id="questions"
       className="pt-8 bg-transparent text-white relative overflow-hidden"
-      // style={{
-      //   backgroundImage: `
-      //     linear-gradient(to bottom, var(--secondary-color) 0%, rgba(0, 0, 0, 0.4) 100%),
-      //     linear-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 1px),
-      //     linear-gradient(90deg, rgba(255, 255, 255, 0.08) 2px, transparent 1px)
-      //   `,
-      //   backgroundSize: "100% 100%, 36px 36px, 36px 36px",
-      // }}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6">
@@ -229,6 +233,7 @@ Telegram: ${data.telegram}
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  onFocus={handlePhoneFocus}
                   className={`mt-1 w-full p-3 rounded-lg bg-[var(--secondary-color)] text-white placeholder-gray-600 border-2 ${
                     phoneError ? "border-red-500" : "border-white/30"
                   } focus:outline-none focus:ring-2 focus:ring-[var(--main-two-color)]`}
