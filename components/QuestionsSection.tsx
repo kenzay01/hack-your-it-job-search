@@ -164,7 +164,7 @@ Telegram: ${data.telegram}
   return (
     <section
       id="questions"
-      className="pt-8 bg-[var(--secondary-color)] text-white relative overflow-hidden"
+      className="pt-8 bg-transparent text-white relative overflow-hidden"
       // style={{
       //   backgroundImage: `
       //     linear-gradient(to bottom, var(--secondary-color) 0%, rgba(0, 0, 0, 0.4) 100%),

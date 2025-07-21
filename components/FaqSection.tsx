@@ -54,7 +54,7 @@ const FaqSection = () => {
   return (
     <section
       id="faqs"
-      className="py-16 md:py-24 bg-transparent relative overflow-hidden"
+      className="py-6 md:py-12 bg-transparent relative overflow-hidden"
     >
       {/* Background decorative elements */}
       {/* <div className="absolute top-0 left-0 w-72 h-72 bg-[#8447e9]/10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div> */}

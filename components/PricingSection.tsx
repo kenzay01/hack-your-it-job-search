@@ -4,6 +4,11 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { ArrowRight, Check } from "lucide-react";
 import { HiOutlineCursorClick } from "react-icons/hi";
+import Image from "next/image";
+import binanceImg from "@/public/payment/binance.png";
+import monoBankImg from "@/public/payment/monobank-logo.png";
+import payPalImg from "@/public/payment/paypal.webp";
+import privatBankImg from "@/public/payment/PrivatBank-corporate-logo-latina.png";
 
 const PricingSection = () => {
   const tariffs = [
@@ -188,6 +193,50 @@ const PricingSection = () => {
             48 год
           </span>
         </p> */}
+        <div className="max-w-4xl mx-auto mt-12 text-center">
+          <h1 className="text-transparent font-extrabold uppercase text-4xl bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+            Варіанти оплати
+          </h1>
+          <div className="bg-[var(--secondary-color)] border-2 border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 text-white text-center transition-all duration-300 hover:scale-101 mt-6 flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col gap-6">
+              <h2 className="text-white text-center md:text-start font-bold">
+                Повна оплата
+              </h2>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                <div className="p-2 bg-[var(--main-two-color)] rounded-xl flex flex-col font-bold">
+                  на ФОП
+                </div>
+                <Image src={payPalImg} alt="PayPal" className="h-8 w-auto" />
+                <div className="flex items-center space-x-2">
+                  <Image
+                    src={binanceImg}
+                    alt="Binance"
+                    className="h-8 w-auto"
+                  />
+                  <span className="text-white font-bold">Криптовалюта</span>
+                </div>
+              </div>
+            </div>
+            <div className="block h-[2px] w-full md:h-12 md:w-[1px] rounded-full bg-gray-200/30"></div>
+            <div className="flex flex-col gap-6">
+              <h2 className="text-white text-center md:text-start font-bold ">
+                Оплата частинами від 2 до 4 місяців
+              </h2>
+              <div className="flex items-center justify-center gap-4">
+                <Image
+                  src={monoBankImg}
+                  alt="Monobank"
+                  className="h-10 w-auto"
+                />
+                <Image
+                  src={privatBankImg}
+                  alt="PrivatBank"
+                  className="h-6 w-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
