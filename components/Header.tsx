@@ -64,7 +64,7 @@ const Header = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border border-gray-200"
+                    className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border-2 border-gray-200"
                   >
                     <span className="absolute inset-0 bg-[var(--main-two-color)] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></span>
                     <span className="relative z-10 text-white transition-colors duration-300">
@@ -77,7 +77,7 @@ const Header = () => {
                   href="https://t.me/dpuchkov_support"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border border-gray-200"
+                  className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border-2 border-gray-200"
                 >
                   <span className="absolute inset-0 bg-[var(--main-two-color)] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></span>
                   <span className="relative z-10 text-white transition-colors duration-300">
@@ -93,7 +93,7 @@ const Header = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border border-gray-200 ml-4"
+                    className="relative px-2 py-1 text-[15px] custom-text overflow-hidden group rounded-full cursor-pointer border-2 border-gray-200 ml-4"
                   >
                     <span className="absolute inset-0 bg-[var(--main-two-color)] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></span>
                     <span className="relative z-10  text-white transition-colors duration-300">
