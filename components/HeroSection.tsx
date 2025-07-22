@@ -58,7 +58,7 @@ const HeroSection = () => {
         {/* <div className="absolute inset-0 bg-black/40 z-10"></div> */}
       </div>
 
-      <div className="md:pt-42 pb-12 bg-transparent text-white overflow-hidden z-30 relative">
+      <div className="md:pt-42 md:pb-24 pb-16 bg-transparent text-white overflow-hidden z-30 relative">
         {/* Desktop content */}
         <div className="hidden md:block px-4 mr-72 relative z-30">
           <div className="max-w-4xl mx-auto text-start">

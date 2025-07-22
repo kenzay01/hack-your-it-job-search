@@ -133,7 +133,7 @@ const JobSearchMarathonSection = () => {
               "Як порахувати свою стелю?",
               "Чи потрібно брати декілька фултаймів?",
               {
-                main: "Прямі контракти та офери вище 3 квартилю",
+                main: "Ефір про прямі контракти та офери вище 3 квартилю",
                 subItems: [
                   "Чи потрібно бути ТОП-спеціалістом?",
                   "Розбори моїх оферів на 7000$ + 12 000$ бонус, на 7500$ та 7000 євро та чому я не прийняв жоден з них",
@@ -304,7 +304,7 @@ const JobSearchMarathonSection = () => {
                 } relative rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all border-2 border-gray-200 duration-300 min-h-[400px] flex flex-col max-w-4xl w-full`}
               >
                 <div className="flex flex-col h-full">
-                  <div className="text-center mb-4 flex items-center justify-start gap-4">
+                  <div className="text-start md:text-center mb-4 flex items-center justify-start gap-4">
                     <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-xl bg-white/15 backdrop-blur-sm flex-shrink-0">
                       {currentModule.icon}
                     </div>

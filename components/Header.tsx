@@ -42,7 +42,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center ">
             <div className="text-2xl font-bold text-white pr-4 relative">
               JobHack <span className="text-[var(--main-two-color)]">IT</span>
-              <Image
+              {/* <Image
                 src={logo1}
                 alt="Logo 1"
                 className="absolute top-1/2 transform -translate-y-1/2 -right-10 w-14 h-auto drop-shadow-2xl"
@@ -51,7 +51,7 @@ const Header = () => {
                 src={logo2}
                 alt="Logo 2"
                 className="absolute top-1/2 transform -translate-y-1/2 -right-21 w-15 h-auto drop-shadow-2xl"
-              />
+              /> */}
             </div>
           </div>
 
