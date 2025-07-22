@@ -52,6 +52,7 @@ const HeroSection = () => {
           // sizes="100vw"
           loading="lazy"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
         <div className="absolute bottom-0 left-0 w-128 h-1 bg-gradient-to-r from-transparent via-[var(--main-two-color)] to-transparent"></div>
         {/* Overlay для кращої читабельності тексту */}
         {/* <div className="absolute inset-0 bg-black/40 z-10"></div> */}
