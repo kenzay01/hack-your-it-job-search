@@ -12,7 +12,7 @@ export default function LessonPage() {
         <iframe
           width="1020"
           height="630"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_UMDtcsu1agFsjWn"
+          src="https://www.youtube.com/embed/zckwTQkJ9lU?si=jUi2OCQp7QhBz-1p"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
