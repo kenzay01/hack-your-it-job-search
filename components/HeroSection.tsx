@@ -103,11 +103,12 @@ const HeroSection = () => {
 
             <div className="flex flex-col items-start justify-bottom">
               <p className="text-white mb-6">
-                За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-two-color)] to-[var(--main-color)]">
-                  з <strong className="font-extrabold">$0</strong> до{" "}
-                  <strong className="font-extrabold">$5 000+</strong>.
+                За 14 днів створи свою систему пошуку роботи, яка дозволить тобі
+                пройти шлях <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                  від Junior до оферів на <strong>$5000+</strong>
                 </span>
+                .
               </p>
 
               <ScrollLink
@@ -162,10 +163,8 @@ const HeroSection = () => {
               </span>
             </p>
             <p className="text-white mb-2 custom-text text-sm">
-              За 14 днів створи власну систему пошуку роботи та підніми дохід{" "}
-              <span className="underline decoration-[var(--secondary-color)]">
-                з $0 до $5 000+.
-              </span>
+              За 14 днів створи свою систему пошуку роботи, яка дозволить тобі
+              пройти шлях від Junior до оферів на <strong>$5000+</strong>.
             </p>
 
             <ScrollLink
