@@ -31,14 +31,14 @@ const TargetAudienceSection = () => {
         <>
           Уже Middle, але застряг на{" "}
           <strong className="font-extrabold">$800</strong> -{" "}
-          <strong className="font-extrabold">$1500</strong> і хочете стрибок
+          <strong className="font-extrabold">$1500</strong> і хочеш стрибок
           ×2-×3
         </>
       ),
       problems: [
         "3+ роки програмуєш, а заробляєш, як Junior",
         "Хочеш працювати на крутих проектах, але не розумієш які скіли потрібно для цього мати",
-        "Важко зрозуміти, скільки ти реально коштуєш, і як правильно називати бажану зарплату на співбесіді",
+        "Важко зрозуміти, на яку зарплатню ти можеш претендуват",
       ],
       bgColor: "bg-[var(--secondary-color)]",
     },
@@ -47,10 +47,7 @@ const TargetAudienceSection = () => {
       title: "Хочеш залетіти на Senior і заробляти в 3-му квартилі",
       problems: [
         "Класно знаєш технічну базу, але не маєш класних оферів",
-        <>
-          Не розумієш як саме тобі перескочити на{" "}
-          <strong className="font-extrabold">$4-5k+</strong>
-        </>,
+        <>Не розумієш як саме тобі отримувати зарплату у 3-му квартилі</>,
         "Потрібен план «20% теорії → 80% результату», а не 50-годинна енциклопедія",
       ],
       bgColor: "bg-[var(--secondary-color)]",
@@ -71,7 +68,7 @@ const TargetAudienceSection = () => {
       problems: [
         "Потрібно швидко ставити питання й одержувати відповідь, а не чекати тижнями",
         "Потрібен «сейф»-чат, де можна кинути чернетку CV без хейту",
-        "Розумієте, що нетворк == майбутні офери",
+        "Розумієш, що нетворк == майбутні офери",
       ],
       bgColor:
         "bg-gradient-to-br from-[var(--secondary-color)] via-[var(--secondary-color)] to-[var(--main-two-color)]",
@@ -157,7 +154,7 @@ const TargetAudienceSection = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                   2 пункти
                 </span>{" "}
-                про тебе – зустрінемось на марафоні й закриємо ваші потреби за{" "}
+                про тебе – зустрінемось на марафоні й закриємо твої потреби за{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
                   14 днів
                 </span>

@@ -116,7 +116,7 @@ const HeroSection = () => {
                 duration={500}
                 className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 custom-text"
               >
-                <span>Долучитись до 14-денного марафону</span>
+                <span>Доєднатись до 14-денного марафону</span>
                 <HiOutlineCursorClick className="w-8 h-8" />
               </ScrollLink>
             </div>
@@ -174,7 +174,7 @@ const HeroSection = () => {
               duration={500}
               className="bg-gradient-to-br cursor-pointer from-[var(--main-color)] to-[var(--main-two-color)] text-white px-4 py-2 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 hover:translate-x-2 custom-text"
             >
-              <span>Долучитись до 14-денного марафону</span>
+              <span>Доєднатись до 14-денного марафону</span>
               <HiOutlineCursorClick className="w-8 h-8" />
             </ScrollLink>
           </div>

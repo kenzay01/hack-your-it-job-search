@@ -12,6 +12,7 @@ import PricingSection from "../components/PricingSection";
 import JobSearchMarathonSection from "@/components/JobSearchMarathonSection";
 import Footer from "@/components/Footer";
 import FaqSection from "@/components/FaqSection";
+import SideButton from "@/components/SideButton";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <QuestionsSection />
       {/* <GuaranteesSection /> */}
       <Footer />
+      <SideButton />
     </div>
   );
 }

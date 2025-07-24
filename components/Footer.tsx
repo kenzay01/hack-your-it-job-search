@@ -27,7 +27,9 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://docs.google.com/document/d/1tWASUGV3BPHPCAjyfVxm2jbDUvmtuvlfRA-2srgFy_E/edit?usp=sharing"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   className="text-gray-300 hover:text-[var(--main-color)] transition-colors duration-300"
                 >
                   Договір оферти
@@ -35,7 +37,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://docs.google.com/document/d/1anYieAwVVuUOJSB2AnPviP0u_9CzrXwv7tgkS-UrXZg/edit?usp=sharing"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   className="text-gray-300 hover:text-[var(--main-color)] transition-colors duration-300"
                 >
                   Політика конфіденційності

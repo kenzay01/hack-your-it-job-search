@@ -18,9 +18,30 @@ const PricingSection = () => {
       discountPrice: "$99",
       btn: "ОБРАТИ BASIC",
       features: [
-        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
-        { text: "2 модуль: Пошук роботи", included: true },
-        { text: "3 модуль: Співбесіди", included: true },
+        {
+          text: (
+            <>
+              <strong>1 модуль:</strong> Твоє позиціювання та упаковка
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>2 модуль:</strong> Пошук роботи
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>3 модуль:</strong> Співбесіди
+            </>
+          ),
+          included: true,
+        },
         {
           text: "1 Q&A сесія",
           included: true,
@@ -41,14 +62,46 @@ const PricingSection = () => {
       discountPrice: "$154",
       btn: "ОБРАТИ PRO",
       features: [
-        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
-        { text: "2 модуль: Пошук роботи", included: true },
-        { text: "3 модуль: Співбесіди", included: true },
         {
-          text: "4 модуль: Гроші - Як вибивати кращі офери",
+          text: (
+            <>
+              <strong>1 модуль:</strong> Твоє позиціювання та упаковка
+            </>
+          ),
           included: true,
         },
-        { text: "5 модуль: Прокачка себе як спеціаліста", included: true },
+        {
+          text: (
+            <>
+              <strong>2 модуль:</strong> Пошук роботи
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>3 модуль:</strong> Співбесіди
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>4 модуль:</strong> Гроші - Як вибивати кращі офери
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>5 модуль:</strong> Прокачка себе як спеціаліста
+            </>
+          ),
+          included: true,
+        },
         {
           text: "1 Q&A сесія",
           included: true,
@@ -61,7 +114,7 @@ const PricingSection = () => {
         },
         { text: "Підтримка куратора 1 на 1", included: true },
         {
-          text: "Спільний чат з учасниками тарифу та Дмитром",
+          text: "Спільний чат з учасниками тарифу та зі мною",
           included: true,
         },
         {
@@ -77,15 +130,54 @@ const PricingSection = () => {
       discountPrice: "$269",
       btn: "ОБРАТИ VIP",
       features: [
-        { text: "1 модуль: Твоє позиціювання та упаковка", included: true },
-        { text: "2 модуль: Пошук роботи", included: true },
-        { text: "3 модуль: Співбесіди", included: true },
         {
-          text: "4 модуль: Гроші - Як вибивати кращі офери",
+          text: (
+            <>
+              <strong>1 модуль:</strong> Твоє позиціювання та упаковка
+            </>
+          ),
           included: true,
         },
-        { text: "5 модуль: Прокачка себе як спеціаліста", included: true },
-        { text: "6 модуль: Робота", included: true },
+        {
+          text: (
+            <>
+              <strong>2 модуль:</strong> Пошук роботи
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>3 модуль:</strong> Співбесіди
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>4 модуль:</strong> Гроші - Як вибивати кращі офери
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>5 модуль:</strong> Прокачка себе як спеціаліста
+            </>
+          ),
+          included: true,
+        },
+        {
+          text: (
+            <>
+              <strong>6 модуль:</strong> Робота
+            </>
+          ),
+          included: true,
+        },
         {
           text: "1 Q&A сесія",
           included: true,
@@ -107,10 +199,10 @@ const PricingSection = () => {
           label: "Тільки для Vip",
         },
         {
-          text: "Підтримка та чат з Дімою 1 на 1",
+          text: "Підтримка та чат зі мною 1 на 1",
           included: true,
         },
-        { text: "Спільний чат з учасниками тарифу та Дмитром", included: true },
+        { text: "Спільний чат з учасниками тарифу та зі мною", included: true },
         {
           text: "Конспекти матеріалів у Notion",
           included: true,

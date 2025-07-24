@@ -356,24 +356,22 @@ const JobSearchMarathonSection = () => {
           <div className="flex items-start space-x-3">
             <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-left">
-              <strong>Live-сесії з Дмитром</strong> + взаємодія з куратором →
-              ставите питання в реальному часі, отримуєте відповіді «на місці».
+              <strong>Live-сесії зі мною</strong> + взаємодія з куратором →
+              ставиш питання в реальному часі, отримуєш відповіді «на місці».
             </p>
           </div>
           <div className="flex items-start space-x-3">
             <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-left">
-              <strong>
-                Ви будете відчувати результат вже під час марафону
-              </strong>{" "}
-              – після впровадження домашніх завдань конверсія вашого CV та
-              LinkedIn у пропозиції збільшиться.
+              <strong>Ти будеш відчувати результат вже під час марафону</strong>{" "}
+              після впровадження домашніх завдань конверсія твого CV та LinkedIn
+              у пропозиції збільшиться.
             </p>
           </div>
           <div className="flex items-start space-x-3">
             <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
             <p className="text-left">
-              <strong>Чітка гарантія</strong> – якщо протягом 7 днів не бачите
+              <strong>Чітка гарантія</strong> – якщо протягом 7 днів ти не бачиш
               прогресу (оновлене CV, LinkedIn, план пошуку) – повертаємо кошти
               без зайвих запитань.
             </p>
