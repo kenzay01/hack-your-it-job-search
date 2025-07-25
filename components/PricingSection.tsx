@@ -238,11 +238,11 @@ const PricingSection = () => {
               </h3>
               <div className="font-semibold text-center mb-4 mr-1 flex items-end justify-center space-x-1">
                 <span className="text-4xl text-transparent bg-clip-text bg-gradient-to-l from-[var(--main-color)] to-[var(--main-two-color)] drop-shadow-sm">
+                  {tariff.discountPrice}
+                </span>
+                <span className="line-through text-gray-400">
                   {tariff.price}
                 </span>
-                {/* <span className="line-through text-gray-400">
-                  {tariff.price}
-                </span> */}
               </div>
               <ul className="space-y-2 md:space-y-4 mb-6">
                 {tariff.features.map((feature, idx) => (

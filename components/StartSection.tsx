@@ -13,8 +13,7 @@ const MarathonPromoBlock = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 2);
+    const targetDate = new Date("2025-07-28T00:01:00");
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -31,6 +30,7 @@ const MarathonPromoBlock = () => {
         });
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(timer); // Зупиняємо таймер, коли час вичерпано
       }
     }, 1000);
 
@@ -42,7 +42,7 @@ const MarathonPromoBlock = () => {
   };
 
   return (
-    <div className="hidden bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
         <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
           {/* Таймер */}
@@ -97,7 +97,7 @@ const MarathonPromoBlock = () => {
                   -20$ / -25$ / -30$
                 </div>
                 <p className="text-sm text-gray-300 mt-2">
-                  Тривалість знижки: 48 год
+                  Тривалість знижки до 28 липня
                 </p>
               </div>
               <div className="bg-transparent rounded-lg p-2 border-2 border-gray-200/30">
