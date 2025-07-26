@@ -121,11 +121,11 @@ const MarathonPromoBlock = () => {
             </h3>
             <div className="bg-transparent rounded-lg md:mt-15">
               <div className="text-3xl lg:text-4xl font-bold text-[#8447e9] mb-2 custom-text uppercase">
-                Субота, 2 серпня
+                Понеділок, 4 серпня
               </div>
-              <div className="text-sm text-white font-medium custom-text">
+              {/* <div className="text-sm text-white font-medium custom-text">
                 Перша загальна Q&A сесія
-              </div>
+              </div> */}
             </div>
           </div>
 

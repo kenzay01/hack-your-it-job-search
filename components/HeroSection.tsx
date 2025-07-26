@@ -14,17 +14,7 @@ const HeroSection = () => {
     <section className="relative bg-transparent text-white z-0">
       {/* Desktop layout - без змін */}
       <div className="hidden lg:block">
-        {/* <Image
-          src={logo1}
-          alt="Logo 1"
-          className="absolute top-62 right-126 w-28 h-auto z-20 -rotate-30 drop-shadow-2xl"
-        />
-        <Image
-          src={logo2}
-          alt="Logo 2"
-          className="absolute top-64 right-53 w-28 h-auto z-20 rotate-18 drop-shadow-2xl"
-        /> */}
-        <div className="absolute top-19 right-38 w-132 h-auto drop-shadow-[0px_20px_75px_rgb(107,14,232,0.5)] z-20">
+        <div className="absolute lg:top-19 lg:-right-14 2xl:top-19 2xl:right-38 w-132 h-auto drop-shadow-[0px_20px_75px_rgb(107,14,232,0.5)] z-20">
           <Image
             src={heroImgPng}
             alt="Hero Image"
