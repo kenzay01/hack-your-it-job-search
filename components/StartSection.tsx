@@ -13,7 +13,7 @@ const MarathonPromoBlock = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-07-28T00:01:00");
+    const targetDate = new Date("2025-07-29T00:01:00");
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
