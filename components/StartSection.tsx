@@ -42,7 +42,7 @@ const MarathonPromoBlock = () => {
   // };
 
   return (
-    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-5xl md:mx-auto mx-6">
+    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-3xl overflow-hidden max-w-4xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
         <div className="grid grid-cols-1 md:flex md:justify-between gap-8 p-6 lg:p-8">
           {/* Таймер */}
@@ -136,7 +136,7 @@ const MarathonPromoBlock = () => {
             <h3 className="text-xl md:text-lg font-semibold text-white mb-4 flex items-center justify-center lg:justify-start gap-2 custom-text">
               Тривалість:
             </h3>
-            <div className="bg-transparent rounded-lg md:mt-10">
+            <div className="bg-transparent rounded-lg md:mt-14">
               <div className="text-3xl lg:text-4xl font-bold text-[#8447e9] mb-2 custom-text uppercase">
                 14 днів
               </div>
