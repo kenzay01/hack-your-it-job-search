@@ -1,52 +1,52 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll";
 
 const MarathonPromoBlock = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // const [timeLeft, setTimeLeft] = useState({
+  //   days: 0,
+  //   hours: 0,
+  //   minutes: 0,
+  //   seconds: 0,
+  // });
 
-  useEffect(() => {
-    const targetDate = new Date("2025-07-29T00:01:00");
+  // useEffect(() => {
+  //   const targetDate = new Date("2025-07-29T00:01:00");
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
+  //   const timer = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = targetDate.getTime() - now;
 
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          ),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
-        });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        clearInterval(timer); // Зупиняємо таймер, коли час вичерпано
-      }
-    }, 1000);
+  //     if (distance > 0) {
+  //       setTimeLeft({
+  //         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+  //         hours: Math.floor(
+  //           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  //         ),
+  //         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+  //         seconds: Math.floor((distance % (1000 * 60)) / 1000),
+  //       });
+  //     } else {
+  //       setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  //       clearInterval(timer); // Зупиняємо таймер, коли час вичерпано
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
-  const formatTime = (time: number) => {
-    return time.toString().padStart(2, "0");
-  };
+  // const formatTime = (time: number) => {
+  //   return time.toString().padStart(2, "0");
+  // };
 
   return (
-    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-7xl md:mx-auto mx-6">
+    <div className="bg-[var(--secondary-color)] border-2 border-gray-200 shadow-lg rounded-2xl overflow-hidden max-w-5xl md:mx-auto mx-6">
       <div className="flex flex-col gap-2 w-full">
-        <div className="grid grid-cols-1 md:flex md:justify-between gap-6 p-6 lg:p-8">
+        <div className="grid grid-cols-1 md:flex md:justify-between gap-8 p-6 lg:p-8">
           {/* Таймер */}
-          <div className="text-center lg:text-left mb-4 md:mb-0">
+          {/* <div className="text-center lg:text-left mb-4 md:mb-0">
             <h3 className="text-xl md:text-lg font-semibold text-white text-center custom-text flex items-center justify-center lg:justify-start gap-2">
               До підвищення ціни залишилось:
             </h3>
@@ -76,12 +76,12 @@ const MarathonPromoBlock = () => {
                 <div className="text-sm text-gray-300 mt-1">Сек.</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          {/* <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div> */}
 
           {/* Спеціальні умови */}
-          <div className="text-center lg:text-left">
+          {/* <div className="text-center lg:text-left">
             <h3 className="text-xl md:text-lg font-semibold text-white custom-text mb-4 flex items-center justify-center lg:justify-start gap-2">
               Спеціальні умови:
             </h3>
@@ -110,12 +110,12 @@ const MarathonPromoBlock = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          {/* <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div> */}
 
           {/* Старт потоку */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left flex-1">
             <h3 className="text-xl md:text-lg font-semibold text-white mb-4 flex items-center justify-center lg:justify-start gap-2 custom-text">
               Старт марафону:
             </h3>
@@ -129,14 +129,14 @@ const MarathonPromoBlock = () => {
             </div>
           </div>
 
-          <div className="hidden md:block h-auto w-[1px] rounded-full bg-gray-200/30 mt-6"></div>
+          <div className="w-full h-[1px] md:h-auto md:w-[1px] rounded-full bg-gray-200/30 md:mt-6"></div>
 
           {/* Тривалість */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left flex-1">
             <h3 className="text-xl md:text-lg font-semibold text-white mb-4 flex items-center justify-center lg:justify-start gap-2 custom-text">
               Тривалість:
             </h3>
-            <div className="bg-transparent rounded-lg md:mt-14">
+            <div className="bg-transparent rounded-lg md:mt-10">
               <div className="text-3xl lg:text-4xl font-bold text-[#8447e9] mb-2 custom-text uppercase">
                 14 днів
               </div>
