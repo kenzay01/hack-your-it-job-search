@@ -155,8 +155,15 @@ const HeroSection = () => {
             </p>
             <p className="text-white mb-2 custom-text text-sm">
               За 14 днів створи ефективні CV/LinkedIn та навчись впевнено
-              проходити будь-які види співбесід, щоб отримати перший офер або
-              мінімум <strong>+6000$</strong> до річного доходу
+              проходити будь-які види співбесід, щоб отримати{" "}
+              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                перший офер
+              </strong>{" "}
+              або мінімум{" "}
+              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
+                +6000$
+              </strong>{" "}
+              до річного доходу
             </p>
 
             <ScrollLink
