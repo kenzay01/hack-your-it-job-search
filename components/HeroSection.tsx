@@ -93,10 +93,11 @@ const HeroSection = () => {
 
             <div className="flex flex-col items-start justify-bottom">
               <p className="text-white mb-6">
-                За 14 днів створи свою систему пошуку роботи, яка дозволить тобі
-                пройти шлях <br />
+                За 14 днів створи ефективні CV/LinkedIn та навчись впевнено
+                проходити будь-які види співбесід, <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--main-color)] to-[var(--main-two-color)]">
-                  від Junior до оферів на <strong>$5000+</strong>
+                  щоб отримати перший офер або мінімум <strong>+6000$</strong>{" "}
+                  до річного доходу
                 </span>
                 .
               </p>
@@ -153,8 +154,9 @@ const HeroSection = () => {
               </span>
             </p>
             <p className="text-white mb-2 custom-text text-sm">
-              За 14 днів створи свою систему пошуку роботи, яка дозволить тобі
-              пройти шлях від Junior до оферів на <strong>$5000+</strong>.
+              За 14 днів створи ефективні CV/LinkedIn та навчись впевнено
+              проходити будь-які види співбесід, щоб отримати перший офер або
+              мінімум <strong>+6000$</strong> до річного доходу
             </p>
 
             <ScrollLink
